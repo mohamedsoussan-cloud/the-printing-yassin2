@@ -1,0 +1,1327 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#F8FAFC">
+<title>Flyers, Affiches &amp; Brochures sur Mesure - The Printing Yassin</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--blue:#0A3A8B;--dark:#062356;--ink:#0b1b3a;--yellow:#FFC800;--cyan:#00AEEF;--bg:#f4f7fc;--line:#e1e8f4;--ease:cubic-bezier(.22,1,.36,1)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Manrope,Arial,sans-serif;background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased}
+.container{max-width:1180px;margin:auto;padding:0 22px}
+:focus-visible{outline:3px solid var(--cyan);outline-offset:3px}
+
+/* Barre de progression */
+.progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--yellow),var(--cyan));z-index:200}
+
+/* En-tête */
+header{position:sticky;top:0;z-index:60;background:rgba(6,35,86,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.08);transition:padding .35s var(--ease),box-shadow .35s}
+header.scrolled{box-shadow:0 10px 40px rgba(6,35,86,.35)}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:20px 0;transition:padding .35s var(--ease)}
+header.scrolled .nav{padding:12px 0}
+.brand{font-family:Sora,sans-serif;font-size:20px;font-weight:800;color:#fff;letter-spacing:.02em}
+.brand span{color:var(--yellow)}
+.nav nav{display:flex;gap:6px}
+.nav a{color:#dbe7ff;text-decoration:none;font-weight:700;font-size:14px;padding:9px 16px;border-radius:999px;position:relative;transition:color .3s,background .3s}
+.nav a:hover{color:#fff;background:rgba(255,255,255,.1)}
+
+/* Hero */
+.hero{position:relative;overflow:hidden;background:linear-gradient(135deg,#041a45,var(--blue) 60%,#0d4fb8);color:#fff;padding:80px 0 110px}
+.hero::before,.hero::after{content:"";position:absolute;border-radius:50%;filter:blur(70px);opacity:.45;animation:float 12s ease-in-out infinite}
+.hero::before{width:420px;height:420px;background:var(--cyan);top:-140px;right:-80px}
+.hero::after{width:320px;height:320px;background:var(--yellow);bottom:-160px;left:8%;opacity:.25;animation-delay:-5s}
+.hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.15fr .85fr;gap:50px;align-items:center}
+.badge{display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border-radius:999px;background:rgba(255,200,0,.14);color:var(--yellow);font-size:12px;font-weight:800;letter-spacing:.04em;border:1px solid rgba(255,200,0,.3)}
+.badge::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor;animation:pulse 1.8s infinite}
+h1{font-family:Sora,sans-serif;font-size:clamp(32px,4.6vw,54px);line-height:1.08;margin:18px 0;font-weight:800;letter-spacing:-.02em}
+.hero p{max-width:600px;color:#c7d8f6;font-size:16.5px;line-height:1.75;margin:0 0 14px}
+.hero p strong{color:#fff}
+.hero-cta{display:flex;gap:12px;margin-top:26px;flex-wrap:wrap}
+.cta{display:inline-flex;align-items:center;gap:10px;padding:14px 24px;border-radius:14px;font-weight:800;font-size:14.5px;text-decoration:none;transition:transform .35s var(--ease),box-shadow .35s}
+.cta-y{background:var(--yellow);color:var(--dark);box-shadow:0 10px 28px rgba(255,200,0,.35)}
+.cta-g{background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.25)}
+.cta:hover{transform:translateY(-3px)}
+.cta-y:hover{box-shadow:0 16px 36px rgba(255,200,0,.5)}
+
+/* Carte 3D animée (moment fort) */
+.stage{perspective:1200px;display:flex;justify-content:center}
+.bcard{position:relative;width:min(380px,100%);aspect-ratio:1.75;transform-style:preserve-3d;animation:flip 9s var(--ease) infinite,bob 5s ease-in-out infinite}
+.bcard .face{position:absolute;inset:0;border-radius:18px;backface-visibility:hidden;-webkit-backface-visibility:hidden;padding:24px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 40px 80px rgba(0,0,0,.4)}
+.front{background:linear-gradient(135deg,#fff,#e8f0ff);color:var(--dark)}
+.front b{font-family:Sora,sans-serif;font-size:20px;letter-spacing:.02em}.front b span{color:#d99f00}
+.front small{color:#4b6190;font-weight:700;font-size:12px}
+.front .bar{height:5px;width:60px;border-radius:9px;background:linear-gradient(90deg,var(--blue),var(--cyan))}
+.front::after{content:"";position:absolute;inset:0;border-radius:18px;background:linear-gradient(115deg,transparent 35%,rgba(255,255,255,.9) 50%,transparent 65%);background-size:250% 100%;animation:shine 4.5s ease-in-out infinite;mix-blend-mode:overlay;pointer-events:none}
+.back{transform:rotateY(180deg);background:linear-gradient(135deg,var(--dark),var(--blue));color:#fff;border:1px solid rgba(255,255,255,.15)}
+.back i{color:var(--yellow);width:22px}
+.back div{font-size:13px;line-height:2;font-weight:600}
+.back .lg{font-family:Sora,sans-serif;font-weight:800;font-size:15px;color:var(--yellow)}
+
+
+/* Tampon animé (moment fort) */
+.stage{display:flex;justify-content:center}
+.scene{position:relative;width:min(330px,100%);aspect-ratio:1}
+.paper{position:absolute;left:0;right:0;bottom:0;height:64%;background:#fff;border-radius:18px;box-shadow:0 40px 80px rgba(0,0,0,.4);animation:bob 5s ease-in-out infinite}
+.paper::before{content:"";position:absolute;left:8%;right:8%;top:14%;height:38%;background:repeating-linear-gradient(#e3ebf8 0 5px,transparent 5px 20px);border-radius:6px;opacity:.9}
+.imprint{position:absolute;left:50%;bottom:22%;width:132px;height:132px;margin-left:-66px;border:5px solid #1356c9;border-radius:50%;display:grid;place-items:center;text-align:center;color:#1356c9;font:800 12px Sora,sans-serif;letter-spacing:.05em;line-height:1.5;mix-blend-mode:multiply;opacity:0;transform:rotate(-12deg) scale(1.25);animation:ink 5s var(--ease) infinite}
+.imprint::before{content:"";position:absolute;inset:8px;border:2px solid #1356c9;border-radius:50%}
+.imprint i{display:block;font-size:15px}
+.stamp{position:absolute;left:50%;bottom:calc(22% + 70px);width:132px;margin-left:-66px;display:flex;flex-direction:column;align-items:center;animation:press 5s var(--ease) infinite;filter:drop-shadow(0 18px 18px rgba(0,0,0,.35))}
+.stamp .knob{width:74px;height:40px;border-radius:20px 20px 8px 8px;background:linear-gradient(135deg,var(--yellow),#ffdf5a)}
+.stamp .handle{width:50px;height:58px;background:linear-gradient(90deg,#0d4fb8,#2a7bff 45%,#0d4fb8)}
+.stamp .base{width:132px;height:30px;border-radius:9px;background:linear-gradient(180deg,#0a2d6e,#041a45)}
+@keyframes press{0%,16%{transform:translateY(-80px)}28%,34%{transform:translateY(0)}52%,100%{transform:translateY(-80px)}}
+@keyframes ink{0%,33%{opacity:0;transform:rotate(-12deg) scale(1.25)}38%{opacity:1;transform:rotate(-12deg) scale(1)}88%{opacity:1;transform:rotate(-12deg) scale(1)}100%{opacity:0}}
+
+
+/* Icône de secours + scène orbitale */
+.image-slot img{position:relative;z-index:1}
+.image-slot .ph{position:absolute;font-size:46px;color:#b7c6e3}
+.image-slot.noimg::after{display:none}
+.orbit{position:relative;width:min(330px,100%);aspect-ratio:1;display:grid;place-items:center}
+.ring{position:absolute;border-radius:50%;border:1.5px dashed rgba(255,255,255,.28);animation:spin 28s linear infinite}
+.r1{inset:4%}.r2{inset:24%;border-color:rgba(255,200,0,.4);animation-direction:reverse;animation-duration:20s}
+.core{width:42%;aspect-ratio:1;border-radius:32px;background:linear-gradient(135deg,rgba(255,255,255,.22),rgba(255,255,255,.06));border:1px solid rgba(255,255,255,.35);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);display:grid;place-items:center;font-size:clamp(40px,9vw,60px);color:var(--yellow);box-shadow:0 30px 70px rgba(0,0,0,.35),0 0 80px rgba(0,174,239,.4);animation:bob 5s ease-in-out infinite}
+.sat{position:absolute;inset:0;animation:spin 18s linear infinite}
+.sat span{position:absolute;top:0;left:50%;width:50px;height:50px;margin:2% 0 0 -25px;border-radius:15px;background:#fff;color:var(--blue);display:grid;place-items:center;font-size:20px;box-shadow:0 14px 30px rgba(0,0,0,.3);animation:spinr 18s linear infinite}
+.s2,.s2 span{animation-delay:-6s}.s3,.s3 span{animation-delay:-12s}
+@keyframes spin{to{transform:rotate(360deg)}}@keyframes spinr{to{transform:rotate(-360deg)}}
+
+/* Atouts */
+.perks{margin-top:-52px;position:relative;z-index:5}
+.perks .container{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.perk{background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px;display:flex;gap:14px;align-items:center;box-shadow:0 18px 40px rgba(6,35,86,.1)}
+.perk i{width:46px;height:46px;border-radius:13px;background:linear-gradient(135deg,var(--blue),var(--cyan));color:#fff;display:grid;place-items:center;font-size:18px;flex:none}
+.perk strong{display:block;font-family:Sora,sans-serif;font-size:14.5px}.perk span{font-size:13px;color:#64748b}
+
+/* Produits */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;padding:50px 0 100px}
+.card{background:#fff;border:1px solid var(--line);border-radius:22px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 12px 34px rgba(6,35,86,.08);transition:box-shadow .5s var(--ease),transform .5s ease-out;transform-style:preserve-3d;will-change:transform}
+.card:hover{box-shadow:0 30px 60px rgba(6,35,86,.18)}
+.image-slot{position:relative;height:230px;background:linear-gradient(135deg,#eaf1ff,#f6f9ff);overflow:hidden;display:grid;place-items:center;color:#9db0d3}
+.image-slot img{width:100%;height:100%;object-fit:cover;transition:transform .9s var(--ease)}
+.card:hover .image-slot img{transform:scale(1.02)}
+.image-slot::after{content:"\f00e";font-family:"Font Awesome 6 Free";font-weight:900;position:absolute;right:14px;bottom:14px;width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.92);color:var(--blue);display:grid;place-items:center;opacity:0;transform:translateY(10px);transition:.4s var(--ease);pointer-events:none}
+.card:hover .image-slot::after{opacity:1;transform:none}
+.card-body{padding:24px;display:flex;flex-direction:column;flex:1}
+.card .badge{align-self:flex-start;background:#e6efff;color:var(--blue);border-color:#c9dbff}
+.card h2{font-family:Sora,sans-serif;font-size:20px;line-height:1.3;margin:14px 0 10px}
+.card p{color:#5b6b8a;font-size:14px;line-height:1.65;margin:12px 0 0}
+.editable-script{margin-top:6px;padding:14px 16px;border-radius:14px;background:linear-gradient(135deg,#fff9e0,#fff3c2);border-left:4px solid var(--yellow);color:#6b4f00;font-size:13.5px;line-height:1.6}
+.actions{display:flex;gap:10px;margin-top:auto;padding-top:22px}
+.quantity{width:78px;border:1.5px solid #cfdaee;border-radius:12px;padding:12px;font:700 15px Manrope,sans-serif;text-align:center;transition:border-color .3s,box-shadow .3s}
+.quantity:focus{outline:0;border-color:var(--blue);box-shadow:0 0 0 4px rgba(10,58,139,.12)}
+.btn{position:relative;overflow:hidden;border:0;border-radius:12px;padding:12px 16px;font:800 14px Manrope,sans-serif;cursor:pointer;text-decoration:none;text-align:center;flex:1;transition:transform .3s var(--ease),box-shadow .3s}
+.btn-primary{background:linear-gradient(135deg,var(--blue),#1356c9);color:#fff;box-shadow:0 10px 24px rgba(10,58,139,.3)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 16px 30px rgba(10,58,139,.4)}
+.btn-primary:active{transform:scale(.97)}
+.btn-primary::after{content:"";position:absolute;top:0;left:-70%;width:50%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.4),transparent);transform:skewX(-20deg);transition:left .7s var(--ease)}
+.btn-primary:hover::after{left:130%}
+.btn-secondary{background:#fff;border:1.5px solid #c6d8f8;color:var(--blue)}
+.btn-secondary:hover{background:#eef4ff}
+.btn.added{background:linear-gradient(135deg,#0f9d58,#22c55e)}
+
+/* Panier */
+/* =========================================
+MESURES AFFICHE
+========================================= */
+
+.measure-options {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 8px 12px;
+margin: 15px 0;
+}
+
+.measure-options label {
+font-size: 13px;
+font-weight: 600;
+margin-bottom: 2px;
+}
+
+.measure-options label i {
+margin-right: 5px;
+}
+
+.measure-input {
+width: 100%;
+padding: 10px 12px;
+border: 1px solid #ddd;
+border-radius: 8px;
+outline: none;
+font-size: 14px;
+box-sizing: border-box;
+transition: .2s;
+}
+
+.measure-input:focus {
+border-color: #f5b400;
+box-shadow: 0 0 0 3px rgba(245,180,0,.12);
+}
+
+.measure-input::placeholder {
+color: #999;
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+.measure-options {
+grid-template-columns: 1fr;
+}
+
+}
+
+
+
+.cart-btn{position:fixed;right:22px;bottom:22px;z-index:90;background:var(--yellow);color:var(--dark);border:0;border-radius:999px;padding:15px 22px;font:800 14.5px Manrope,sans-serif;box-shadow:0 14px 36px rgba(6,35,86,.35);cursor:pointer;display:flex;align-items:center;gap:9px;transition:transform .35s var(--ease)}
+.cart-btn:hover{transform:translateY(-4px) scale(1.04)}
+.cart-btn.bump{animation:bump .6s var(--ease)}
+.count{display:inline-grid;place-items:center;min-width:26px;height:26px;padding:0 6px;border-radius:999px;background:var(--dark);color:#fff;font-size:13px}
+.modal{position:fixed;inset:0;background:rgba(3,12,35,.65);backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;padding:20px;z-index:100;opacity:0;visibility:hidden;transition:opacity .35s,visibility .35s}
+.modal.open{opacity:1;visibility:visible}
+.modal-box{background:#fff;border-radius:24px;width:min(700px,100%);max-height:86vh;overflow:auto;padding:28px;position:relative;transform:translateY(30px) scale(.96);transition:transform .5s var(--ease);box-shadow:0 40px 90px rgba(0,0,0,.4)}
+.modal.open .modal-box{transform:none}
+.modal-box .badge{background:#e6efff;color:var(--blue);border-color:#c9dbff}
+.modal-box h2{font-family:Sora,sans-serif;margin:8px 0 18px}
+.close{position:absolute;right:16px;top:16px;border:0;background:#eef2fa;border-radius:50%;width:40px;height:40px;cursor:pointer;font-size:17px;color:var(--ink);transition:transform .4s var(--ease),background .3s}
+.close:hover{transform:rotate(90deg);background:#dfe8f7}
+.cart-modal-title{display:flex;align-items:center;gap:12px}.cart-modal-title>i{color:var(--blue);font-size:22px}
+.empty-cart{text-align:center;padding:44px 15px;color:#64748b}.empty-cart i{font-size:42px;color:var(--blue);animation:bob 3s ease-in-out infinite}.empty-cart h3{margin:12px 0 5px;color:var(--ink);font-family:Sora,sans-serif}
+.cart-item-rich{display:grid;grid-template-columns:60px 1fr 74px 40px;gap:14px;align-items:center;padding:14px 0;border-bottom:1px solid var(--line);animation:slideIn .5s var(--ease) both}
+.cart-thumb{width:60px;height:60px;border-radius:14px;background:#eef2fa;display:grid;place-items:center;overflow:hidden;color:#9db0d3}.cart-thumb img{width:100%;height:100%;object-fit:cover}
+.cart-info{min-width:0;display:flex;flex-direction:column;gap:3px}.cart-category{font-size:10.5px;font-weight:800;text-transform:uppercase;color:var(--blue);letter-spacing:.06em}.cart-info strong{font-size:14px}.cart-info small{font-size:11.5px;color:#64748b;line-height:1.4;max-height:32px;overflow:hidden}
+.cart-item-rich .quantity{width:74px;padding:9px}
+.cart-delete{border:0;background:#fee2e2;color:#dc2626;width:38px;height:38px;border-radius:11px;cursor:pointer;transition:transform .3s var(--ease),background .3s}.cart-delete:hover{transform:scale(1.12);background:#fecaca}
+.image-lightbox{position:fixed;inset:0;background:rgba(3,12,35,.9);display:flex;align-items:center;justify-content:center;padding:25px;z-index:300;opacity:0;visibility:hidden;transition:opacity .35s,visibility .35s}
+.image-lightbox.open{opacity:1;visibility:visible}
+.image-lightbox img{max-width:92vw;max-height:88vh;object-fit:contain;border-radius:16px;box-shadow:0 30px 80px rgba(0,0,0,.5);transform:scale(.9);transition:transform .5s var(--ease)}
+.image-lightbox.open img{transform:none}
+.image-lightbox button{position:absolute;top:18px;right:22px;width:46px;height:46px;border:0;border-radius:50%;background:#fff;color:var(--ink);font-size:20px;cursor:pointer}
+.toast{position:fixed;left:50%;bottom:28px;transform:translate(-50%,120px);background:var(--dark);color:#fff;padding:13px 22px;border-radius:14px;font-weight:700;font-size:14px;z-index:400;box-shadow:0 20px 50px rgba(0,0,0,.35);display:flex;gap:10px;align-items:center;transition:transform .5s var(--ease)}
+.toast i{color:#4ade80}.toast.show{transform:translate(-50%,0)}
+
+footer{background:linear-gradient(135deg,#041a45,var(--dark));color:#aebfe0;padding:34px 0;text-align:center;font-size:14px;border-top:3px solid var(--yellow)}
+
+/* Apparition au scroll */
+.reveal{opacity:0;transform:translateY(34px);transition:opacity .8s var(--ease),transform .8s var(--ease);transition-delay:var(--d,0s)}
+.reveal.in{opacity:1;transform:none}
+.hero .reveal-h{animation:rise .9s var(--ease) both;animation-delay:var(--d,0s)}
+
+@keyframes flip{0%,38%{transform:rotateY(0)}50%,88%{transform:rotateY(180deg)}100%{transform:rotateY(360deg)}}
+@keyframes bob{0%,100%{translate:0 0}50%{translate:0 -12px}}
+@keyframes shine{0%,55%{background-position:150% 0}100%{background-position:-100% 0}}
+@keyframes float{0%,100%{transform:translate(0,0)}50%{transform:translate(-30px,30px)}}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,200,0,.6)}100%{box-shadow:0 0 0 9px rgba(255,200,0,0)}}
+@keyframes rise{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
+@keyframes bump{0%,100%{transform:scale(1)}30%{transform:scale(1.18) rotate(-4deg)}60%{transform:scale(.95)}}
+@keyframes slideIn{from{opacity:0;transform:translateX(24px)}to{opacity:1;transform:none}}
+
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr}.stage{order:-1}.grid{grid-template-columns:1fr 1fr}.perks .container{grid-template-columns:1fr}}
+@media(max-width:600px){.grid{grid-template-columns:1fr}.nav nav{display:none}.hero{padding:50px 0 100px}.cart-item-rich{grid-template-columns:48px 1fr 64px 36px;gap:10px}.cart-thumb{width:48px;height:48px}.cart-btn span.lbl{display:none}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}}
+</style>
+<style>/* pp.css */
+/* The Printing Yassin — styles panier, options, devis */
+:root{--pp-b:#0A3A8B;--pp-d:#062356;--pp-y:#FFC800;--pp-c:#00AEEF;--pp-line:#e1e8f4;--pp-ink:#0b1b3a;--pp-ease:cubic-bezier(.22,1,.36,1)}
+.cart-btn,#cartModal,#main-cart-modal,.image-lightbox+.toast,#toast{display:none!important}
+body.pp-lock{overflow:hidden}
+.pp-themed{--pp-b:var(--blue);--pp-d:var(--dark);--pp-y:var(--yellow);--pp-c:var(--cyan)}
+.pp-themed .hero{background:linear-gradient(135deg,var(--hd),var(--blue) 60%,var(--hm))!important}
+.pp-themed header{background:color-mix(in srgb,var(--dark) 85%,transparent)!important}
+.pp-themed footer{background:linear-gradient(135deg,var(--hd),var(--dark))!important}
+.pp-themed .cta-y,.pp-themed .btn-primary{color:var(--hd)}
+.pp-themed .btn-primary{background:linear-gradient(135deg,var(--blue),var(--hm))!important}
+
+/* Options produit */
+.pp-opts{display:grid;gap:14px;margin:18px 0 6px;padding:16px;border-radius:16px;background:#f6f9ff;border:1px solid var(--pp-line)}
+.pp-themed .pp-opts{background:color-mix(in srgb,var(--blue) 5%,#fff)}
+.pp-g{border:0;margin:0;padding:0;min-width:0}.pp-g[hidden]{display:none}
+.pp-g legend{padding:0;margin:0 0 7px;font:700 13px Manrope,sans-serif;color:var(--pp-ink)}.pp-g legend em{font-weight:500;color:#64748b}
+.pp-chips{display:flex;flex-wrap:wrap;gap:8px}
+.pp-chip{position:relative;cursor:pointer}
+.pp-chip input{position:absolute;opacity:0;inset:0;width:100%;height:100%;margin:0;cursor:pointer}
+.pp-chip span{display:flex;flex-direction:column;gap:1px;padding:9px 14px;border-radius:12px;background:#fff;border:1.5px solid var(--pp-line);font:600 13px Manrope,sans-serif;color:var(--pp-ink);transition:border-color .2s,background .2s,box-shadow .2s}
+.pp-chip span i{font-style:normal;font-weight:500;font-size:11px;color:#64748b}
+.pp-chip:hover span{border-color:var(--pp-b)}
+.pp-chip input:checked+span{border-color:var(--pp-b);background:color-mix(in srgb,var(--pp-b) 9%,#fff);box-shadow:0 0 0 3px color-mix(in srgb,var(--pp-b) 18%,transparent)}
+.pp-chip input[type=checkbox]:checked+span b::before{content:"✓ "}
+.pp-chip input:focus-visible+span{outline:3px solid var(--pp-c);outline-offset:2px}
+.pp-in{width:100%;padding:10px 12px;border-radius:12px;border:1.5px solid var(--pp-line);font:500 14px Manrope,sans-serif;background:#fff;color:var(--pp-ink)}
+.pp-in:focus{outline:none;border-color:var(--pp-b)}
+.pp-sum{font:600 12.5px Manrope,sans-serif;color:var(--pp-b);padding-top:10px;border-top:1px dashed var(--pp-line)}.pp-sum i{margin-right:6px}
+.pp-qsel,.pp-u{font:700 14px Manrope,sans-serif}.pp-qsel{width:auto!important;min-width:150px;padding:10px 12px;border-radius:12px;border:1.5px solid var(--pp-line);background:#fff}.pp-u{color:#64748b;margin:0 6px}
+.actions{flex-wrap:wrap}
+
+/* Bouton flottant */
+#pp-fab{position:fixed;left:18px;bottom:22px;z-index:90;display:flex;align-items:center;gap:9px;padding:13px 18px;border:0;border-radius:999px;background:var(--pp-d);color:#fff;font:800 14px Manrope,sans-serif;cursor:pointer;box-shadow:0 14px 34px rgba(6,35,86,.4);transition:transform .3s var(--pp-ease)}
+#pp-fab:hover{transform:translateY(-3px)}#pp-fab b{min-width:24px;height:24px;border-radius:12px;background:var(--pp-y);color:var(--pp-d);display:grid;place-items:center;font-size:12px;padding:0 6px}
+@media(max-width:600px){#pp-fab span{display:none}}
+
+/* Drawer */
+.pp-ov{position:fixed;inset:0;background:rgba(3,12,35,.55);opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s;z-index:500}.pp-ov.open{opacity:1;visibility:visible}
+.pp-drawer{position:fixed;top:0;right:0;height:100%;width:min(480px,100%);background:#fff;z-index:501;display:flex;flex-direction:column;transform:translateX(105%);transition:transform .4s var(--pp-ease);box-shadow:-20px 0 60px rgba(0,0,0,.25);font-family:Manrope,sans-serif;color:var(--pp-ink)}
+.pp-drawer.open{transform:none}
+.pp-drawer header{display:flex;justify-content:space-between;align-items:center;padding:20px 22px;border-bottom:1px solid var(--pp-line)}
+.pp-drawer header small{font-weight:700;color:var(--pp-b);font-size:12px}.pp-drawer h2{margin:2px 0 0;font:800 22px Sora,sans-serif}.pp-drawer h2 span{color:#64748b;font-size:15px}
+#pp-x{width:40px;height:40px;border-radius:12px;border:0;background:#eef2fa;cursor:pointer;font-size:16px}
+.pp-list{flex:1;overflow:auto;padding:14px 18px}
+.pp-drawer footer{padding:16px 20px 20px;border-top:1px solid var(--pp-line);background:#f8fafd}.pp-drawer footer p{margin:0 0 12px;font-size:12.5px;color:#64748b}
+
+/* Lignes */
+.pp-row{display:grid;grid-template-columns:64px 1fr;gap:12px;padding:14px 0;border-bottom:1px solid var(--pp-line)}
+.pp-thumb{width:64px;height:64px;border-radius:14px;background:#eef2fa;overflow:hidden;display:grid;place-items:center;color:#9db0d3}.pp-thumb img{width:100%;height:100%;object-fit:cover}
+.pp-info small{display:block;font:800 10.5px Manrope;color:var(--pp-b);margin-bottom:2px}.pp-info strong{font-size:14.5px;line-height:1.3;display:block}
+.pp-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:7px}.pp-tags span{font-size:11.5px;background:#eef3fc;border-radius:8px;padding:3px 8px;color:#334155}.pp-tags b{font-weight:700;color:var(--pp-ink)}
+.pp-n{margin:7px 0 0;font-size:12px;font-style:italic;color:#64748b}
+.pp-ctl{grid-column:1/-1;display:flex;align-items:center;gap:10px;justify-content:flex-end}
+.pp-step{display:flex;border:1.5px solid var(--pp-line);border-radius:12px;overflow:hidden}
+.pp-step button{width:36px;border:0;background:#f3f6fc;font-size:18px;cursor:pointer}.pp-step button:hover{background:#e3ebf8}
+.pp-step input{width:64px;border:0;text-align:center;font:700 14px Manrope;-moz-appearance:textfield}.pp-step input::-webkit-inner-spin-button{display:none}
+.pp-unit{font-size:12px;color:#64748b;margin-right:auto}
+.pp-del{width:38px;height:38px;border:0;border-radius:11px;background:#fee2e2;color:#dc2626;cursor:pointer}.pp-del:hover{background:#fecaca}
+.pp-empty{text-align:center;padding:50px 20px;color:#64748b}.pp-empty i{font-size:42px;color:#b7c6e3}.pp-empty h3{color:var(--pp-ink);font-family:Sora,sans-serif;margin:14px 0 6px}
+
+/* Boutons génériques */
+.pp-btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 20px;border-radius:13px;border:0;font:800 14.5px Manrope,sans-serif;cursor:pointer;text-decoration:none;transition:transform .25s var(--pp-ease),box-shadow .25s}
+.pp-btn:hover{transform:translateY(-2px)}.pp-btn-p{background:var(--pp-b);color:#fff;box-shadow:0 10px 24px color-mix(in srgb,var(--pp-b) 35%,transparent)}
+.pp-btn-g{background:#fff;color:var(--pp-ink);border:1.5px solid var(--pp-line)}.pp-btn-wa{background:#25D366;color:#fff;box-shadow:0 10px 26px rgba(37,211,102,.4)}
+.pp-block{width:100%}.pp-two{display:grid;grid-template-columns:1fr auto;gap:10px;margin-top:10px}
+
+/* Toast */
+#pp-toast{position:fixed;left:50%;bottom:26px;transform:translate(-50%,140px);background:var(--pp-d);color:#fff;padding:12px 18px;border-radius:14px;font:700 14px Manrope,sans-serif;z-index:600;display:flex;gap:14px;align-items:center;transition:transform .45s var(--pp-ease);box-shadow:0 20px 50px rgba(0,0,0,.35);max-width:92vw}
+#pp-toast.show{transform:translate(-50%,0)}#pp-toast button{background:var(--pp-y);color:var(--pp-d);border:0;border-radius:9px;padding:6px 11px;font:800 12.5px Manrope;cursor:pointer}
+.btn.added{background:#16a34a!important}
+@media(prefers-reduced-motion:reduce){*{transition-duration:.01ms!important}}
+
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>/* theme.css */
+/* The Printing Yassin — thème éco clair (menthe & océan) — identique à index.html
+   Chargé en dernier sur toutes les pages produits + devis */
+:root,body{--p1:#10B981;--p2:#0EA5E9;--p1r:16,185,129;--p2r:14,165,233;--p1d:#047857;--p1m:#059669;--p1x:#065f46;--p1l:#34d399;--p1ll:#6ee7b7;--p2d:#0369A1;--p2l:#38bdf8;--t1:#E3F8EF;--t2:#E0F2FE}
+:root,body{
+  --bg:#F8FAFC;--bg2:#F1F5F9;--card:#FFFFFF;--ink:#0F172A;--txt:#0F172A;--mut:#475569;
+  --line:rgba(15,23,42,.09);--a1:var(--p1);--a2:var(--p2);--em:var(--p1);--emd:var(--p1d);--oc:var(--p2);--ocd:var(--p2d);
+  --mint:var(--t1);--sky:var(--t2);--ease:cubic-bezier(.16,1,.3,1);
+  /* variables propres aux pages (anciens bleu / jaune) → palette éco */
+  --blue:var(--p1m);--dark:#0F172A;--hd:#0F172A;--hm:var(--p2);--yellow:var(--p1);--cyan:var(--p2);
+  --pp-b:var(--p1);--pp-d:#0F172A;--pp-y:var(--p1);--pp-c:var(--p2);--pp-ink:#0F172A;--pp-line:rgba(15,23,42,.1)
+}
+html{scroll-padding-top:90px}
+body,button,input,select,textarea,.btn,.cta,.quantity,.pp-in,.pp-chip span,.pp-btn,.pp-qsel,.pp-u,.pp-g legend,#pp-fab,#pp-toast,#pp-toast button,.pp-drawer,.pp-step input,.pp-step button,.pp-info small{font-family:'Plus Jakarta Sans',system-ui,-apple-system,Segoe UI,sans-serif!important}
+h1,h2,h3,.brand,.perk strong,.cart-modal-title h2,.pp-drawer h2,.pp-empty h3,.empty-cart h3,.front b,.back .lg,.imprint{font-family:'Plus Jakarta Sans',system-ui,sans-serif!important;letter-spacing:-.025em}
+h1,h2{text-wrap:balance}
+body{color:var(--ink)!important;line-height:1.6;
+ background:radial-gradient(900px 560px at 0% 0%,var(--t1),transparent 62%),radial-gradient(800px 560px at 100% 10%,var(--t2),transparent 62%),#F8FAFC!important;background-repeat:no-repeat!important;overflow-x:hidden}
+body::before{display:none!important}
+:focus-visible{outline:2px solid var(--em)!important;outline-offset:3px}
+.progress{background:linear-gradient(90deg,var(--p1),var(--p2))!important}
+
+/* ===== En-tête : pilule flottante (comme l'index) ===== */
+header{position:sticky;top:0;z-index:60;padding:14px 0 0!important;background:transparent!important;border:0!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;box-shadow:none!important}
+header.scrolled{box-shadow:none!important}
+header .nav,header.scrolled .nav{width:min(1180px,100% - 40px);max-width:none!important;margin:0 auto!important;padding:10px 12px 10px 20px!important;border-radius:999px;
+ background:rgba(255,255,255,.66);border:1px solid rgba(15,23,42,.08);box-shadow:0 8px 30px rgba(15,23,42,.06);backdrop-filter:blur(18px) saturate(1.4);-webkit-backdrop-filter:blur(18px) saturate(1.4);transition:background .5s var(--ease),box-shadow .5s var(--ease)}
+header.scrolled .nav{background:rgba(255,255,255,.92);box-shadow:0 18px 44px rgba(15,23,42,.12)}
+.brand{display:flex;align-items:center;gap:10px;color:var(--txt)!important;font-size:17px!important;font-weight:800!important;letter-spacing:-.01em!important;text-transform:none;text-decoration:none}
+.brand span{color:#64748B!important}
+.brand .mark{display:grid;place-items:center;width:32px;height:32px;flex:none;filter:drop-shadow(0 4px 10px rgba(var(--p1r),.35))}
+.brand .mark img{width:32px;height:32px;object-fit:contain;border-radius:8px}
+.brand .mark img+svg{display:none}.brand .mark svg{width:32px;height:32px}
+.nav nav{display:flex;gap:4px}
+.nav a{position:relative;color:#475569!important;font-weight:600!important;font-size:14px;border-radius:999px!important;background:transparent!important;text-decoration:none}
+.nav a::after{content:"";position:absolute;left:16px;right:16px;bottom:4px;height:2px;border-radius:2px;background:linear-gradient(90deg,var(--p1),var(--p2));transform:scaleX(0);transform-origin:left;transition:transform .5s var(--ease)}
+.nav a:hover{color:var(--txt)!important;background:transparent!important}.nav a:hover::after{transform:scaleX(1)}
+.nav a.back{padding:9px 16px}
+.nav a.back::after{display:none}.nav a.back:hover{color:var(--p1d)!important}
+.nav a.nav-cta{color:#fff!important;background:linear-gradient(135deg,var(--p1),var(--p2))!important;box-shadow:0 10px 30px rgba(var(--p2r),.28)}.nav a.nav-cta::after{display:none}.nav a.nav-cta:hover{color:#fff!important;box-shadow:0 14px 44px rgba(var(--p2r),.45)}
+
+/* ===== Hero ===== */
+.hero,.pp-themed .hero{background:transparent!important;color:var(--ink)!important;padding:70px 0 100px}
+.hero::before{background:var(--p1)!important;opacity:.14!important;filter:blur(110px)}
+.hero::after{background:var(--p2)!important;opacity:.14!important;filter:blur(110px)}
+.hero h1{color:var(--txt)!important;font-weight:800}
+.hero p{color:var(--mut)!important}.hero p strong{color:var(--txt)!important}
+.badge{background:#fff!important;color:#334155!important;border:1px solid rgba(15,23,42,.1)!important;box-shadow:0 4px 14px rgba(15,23,42,.05)}
+.badge::before{background:var(--p1)!important}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(var(--p1r),.55)}100%{box-shadow:0 0 0 9px rgba(var(--p1r),0)}}
+.cta{border-radius:999px!important}
+.cta-y,.pp-themed .cta-y{background:linear-gradient(135deg,var(--p1),var(--p2))!important;color:#fff!important;box-shadow:0 10px 30px rgba(var(--p2r),.28)!important}
+.cta-y:hover{box-shadow:0 14px 44px rgba(var(--p2r),.5),0 0 0 4px rgba(var(--p1r),.15)!important}
+.cta-g{background:#fff!important;border:1px solid rgba(15,23,42,.12)!important;color:var(--txt)!important;box-shadow:0 1px 2px rgba(15,23,42,.05)}
+.cta-g:hover{border-color:var(--p1)!important;box-shadow:0 10px 30px rgba(var(--p1r),.18)}
+
+/* Visuels animés du hero */
+.front{background:linear-gradient(135deg,#fff,var(--t1))!important;color:var(--txt)!important;box-shadow:0 30px 70px rgba(15,23,42,.18)!important}
+.front small{color:#64748B!important}.front b span{color:var(--p1d)!important}.front .bar{background:linear-gradient(90deg,var(--p1),var(--p2))!important}
+.back{background:linear-gradient(135deg,#0F172A,var(--p1x))!important;color:#fff!important;border:1px solid rgba(255,255,255,.12)!important;box-shadow:0 30px 70px rgba(15,23,42,.3)!important}
+.back i,.back .lg{color:var(--p1l)!important}
+.ring{border-color:rgba(15,23,42,.18)!important}.r2{border-color:rgba(var(--p1r),.5)!important}
+.core{background:linear-gradient(135deg,#fff,var(--t1))!important;border:1px solid rgba(15,23,42,.08)!important;color:var(--p1m)!important;box-shadow:0 30px 70px rgba(15,23,42,.14),0 0 70px rgba(var(--p1r),.25)!important}
+.sat span{background:#fff!important;color:var(--p1d)!important;border:1px solid rgba(15,23,42,.06);box-shadow:0 14px 30px rgba(15,23,42,.14)!important}
+.paper{box-shadow:0 30px 70px rgba(15,23,42,.16)!important}.paper::before{background:repeating-linear-gradient(#E2E8F0 0 5px,transparent 5px 20px)!important}
+.imprint{border-color:var(--p1)!important;color:var(--p1d)!important}.imprint::before{border-color:var(--p1)!important}
+.stamp{filter:drop-shadow(0 18px 18px rgba(15,23,42,.25))!important}
+.stamp .knob{background:linear-gradient(135deg,var(--p1ll),var(--p1))!important}
+.stamp .handle{background:linear-gradient(90deg,var(--p2d),var(--p2l) 45%,var(--p2d))!important}
+.stamp .base{background:linear-gradient(180deg,#1e293b,#0F172A)!important}
+
+/* ===== Atouts ===== */
+.perk{background:#fff!important;border:1px solid rgba(15,23,42,.08)!important;box-shadow:0 1px 2px rgba(15,23,42,.04),0 14px 40px rgba(15,23,42,.06)!important}
+.perk i{background:linear-gradient(135deg,var(--p1),var(--p2))!important;color:#fff!important}.perk span{color:var(--mut)!important}
+
+/* ===== Cartes produit ===== */
+.card{background:#fff!important;border:1px solid rgba(15,23,42,.08)!important;box-shadow:0 1px 2px rgba(15,23,42,.04),0 14px 40px rgba(15,23,42,.06)!important}
+.card:hover{border-color:rgba(var(--p1r),.55)!important;box-shadow:0 18px 44px rgba(15,23,42,.11),0 0 0 2px rgba(var(--p1r),.08)!important}
+.image-slot{background:linear-gradient(135deg,var(--t1),var(--t2))!important;color:#94a3b8!important}
+.image-slot::after{background:rgba(255,255,255,.95)!important;color:var(--p1d)!important;box-shadow:0 6px 18px rgba(15,23,42,.15)}
+.card .badge{background:var(--t1)!important;border-color:rgba(var(--p1r),.4)!important;color:var(--p1d)!important;box-shadow:none}
+.card h2{color:var(--txt)!important}.card p{color:var(--mut)!important}
+.editable-script{background:var(--t1)!important;border-left:4px solid var(--p1)!important;color:var(--p1x)!important}
+.quantity,.pp-qsel{background:#fff!important;border:1.5px solid rgba(15,23,42,.14)!important;color:var(--txt)!important}
+.quantity:focus{border-color:var(--p1)!important;box-shadow:0 0 0 4px rgba(var(--p1r),.16)!important}
+.btn{border-radius:999px!important}
+.btn-primary,.pp-themed .btn-primary{background:linear-gradient(135deg,var(--p1),var(--p2))!important;color:#fff!important;box-shadow:0 10px 30px rgba(var(--p2r),.28)!important}
+.btn-primary:hover{box-shadow:0 14px 44px rgba(var(--p2r),.5),0 0 0 4px rgba(var(--p1r),.15)!important}
+.btn-secondary{background:#fff!important;border:1px solid rgba(15,23,42,.12)!important;color:var(--txt)!important}
+.btn-secondary:hover{border-color:var(--p1)!important;background:#fff!important}
+.btn.added{background:linear-gradient(135deg,var(--p1m),var(--p1l))!important}
+
+/* ===== Options produit ===== */
+.pp-opts,.pp-themed .pp-opts{background:rgba(var(--p1r),.045)!important;border:1px solid rgba(var(--p1r),.2)!important}
+.pp-g legend{color:var(--txt)!important}.pp-g legend em{color:#64748B!important}
+.pp-chip span{background:#fff!important;border:1.5px solid rgba(15,23,42,.12)!important;color:var(--txt)!important}
+.pp-chip span i{color:#64748B!important}
+.pp-chip:hover span{border-color:var(--p1)!important}
+.pp-chip input:checked+span{border-color:var(--p1)!important;background:var(--t1)!important;box-shadow:0 0 0 3px rgba(var(--p1r),.18)!important;color:var(--p1d)!important}
+.pp-chip input:focus-visible+span{outline:2px solid var(--p1)}
+.pp-in{background:#fff!important;border:1.5px solid rgba(15,23,42,.14)!important;color:var(--txt)!important}.pp-in::placeholder{color:#94a3b8}
+.pp-in:focus{border-color:var(--p1)!important;box-shadow:0 0 0 4px rgba(var(--p1r),.14)}
+.pp-sum{color:var(--p1d)!important;border-color:rgba(var(--p1r),.3)!important}
+.pp-u{color:#64748B!important}
+
+/* ===== Panier ===== */
+#pp-fab{background:#fff!important;color:var(--txt)!important;border:1px solid rgba(15,23,42,.1)!important;box-shadow:0 14px 34px rgba(15,23,42,.18)!important;backdrop-filter:blur(14px)}
+#pp-fab:hover{border-color:var(--p1)!important}
+#pp-fab b{background:linear-gradient(135deg,var(--p1),var(--p2))!important;color:#fff!important}
+.pp-ov{background:rgba(15,23,42,.4)!important;backdrop-filter:blur(4px)}
+.pp-drawer{background:#fff!important;color:var(--ink)!important;border-left:1px solid rgba(15,23,42,.08);box-shadow:-20px 0 60px rgba(15,23,42,.18)!important}
+.pp-drawer header{padding:20px 22px!important;border-color:rgba(15,23,42,.08)!important;background:transparent!important}
+.pp-drawer header small{color:var(--p1d)!important}.pp-drawer h2 span{color:#64748B!important}
+#pp-x{background:#F1F5F9!important;color:var(--txt)!important}#pp-x:hover{background:#E2E8F0!important}
+.pp-drawer footer{background:#F8FAFC!important;border-color:rgba(15,23,42,.08)!important;padding:16px 20px 20px!important;color:var(--mut)!important}.pp-drawer footer p{color:var(--mut)!important}
+.pp-row{border-color:rgba(15,23,42,.08)!important}.pp-thumb{background:linear-gradient(135deg,var(--t1),var(--t2))!important;color:#94a3b8!important}
+.pp-info small{color:var(--p1d)!important}.pp-info strong{color:var(--txt)}
+.pp-tags span{background:#F1F5F9!important;color:#334155!important}.pp-tags b{color:var(--txt)!important}
+.pp-n,.pp-unit{color:#64748B!important}
+.pp-step{border-color:rgba(15,23,42,.12)!important}.pp-step button{background:#F1F5F9!important;color:var(--txt)!important}.pp-step button:hover{background:#E2E8F0!important}
+.pp-step input{background:transparent!important;color:var(--txt)!important}
+.pp-del{background:#FEE2E2!important;color:#dc2626!important}.pp-del:hover{background:#FECACA!important}
+.pp-empty{color:#64748B!important}.pp-empty h3{color:var(--txt)!important}.pp-empty i{color:#94a3b8!important}
+.pp-btn{border-radius:999px!important}
+.pp-btn-p{background:linear-gradient(135deg,var(--p1),var(--p2))!important;color:#fff!important;box-shadow:0 10px 30px rgba(var(--p2r),.28)!important}
+.pp-btn-g{background:#fff!important;color:var(--txt)!important;border:1px solid rgba(15,23,42,.12)!important}.pp-btn-g:hover{border-color:var(--p1)!important}
+.pp-btn-wa{background:#25D366!important;color:#04210f!important;box-shadow:0 10px 30px rgba(37,211,102,.35)!important}
+#pp-toast{background:#0F172A!important;color:#fff!important;border:1px solid rgba(255,255,255,.08)}
+#pp-toast button{background:linear-gradient(135deg,var(--p1),var(--p2))!important;color:#fff!important}
+
+/* ===== Pied de page ===== */
+footer{background:transparent!important;border-top:1px solid rgba(15,23,42,.08)!important;color:var(--mut)!important}
+footer a{color:var(--mut)}footer a:hover{color:var(--txt)}
+.reveal{transition-timing-function:cubic-bezier(.16,1,.3,1)!important}
+
+/* ===== Devis ===== */
+.panel{background:#fff!important;border:1px solid rgba(15,23,42,.08)!important;box-shadow:0 1px 2px rgba(15,23,42,.04),0 14px 40px rgba(15,23,42,.06)!important;backdrop-filter:none!important}
+.steps button{background:#fff!important;border-color:rgba(15,23,42,.1)!important;color:var(--mut)!important}
+.steps button b{background:#E2E8F0!important;color:var(--txt)!important}
+.steps button.on{border-color:var(--p1)!important;color:var(--txt)!important}.steps button.done{color:var(--p1d)!important}
+.steps button.on b,.steps button.done b{background:linear-gradient(135deg,var(--p1),var(--p2))!important;color:#fff!important}
+label.l{color:var(--txt)!important}label.l i{color:#ef4444!important}
+.side li{color:var(--txt)!important;border-color:rgba(15,23,42,.08)!important}.side li span{color:var(--mut)!important}
+.side .tot{background:var(--t1)!important;border:1px solid rgba(var(--p1r),.35)!important;color:var(--p1d)!important}
+.chat{background:#F1F5F9!important;border:1px solid rgba(15,23,42,.08)!important}
+.bubble{background:#DCF8C6!important;border:1px solid rgba(var(--p1r),.35)!important;color:var(--p1x)!important}
+.ok i{color:var(--p1)!important}
+.pp-in.err{border-color:#f87171!important;background:#FEF2F2!important}
+.nav a.back{color:var(--mut)!important}
+
+@media(max-width:600px){header .nav,header.scrolled .nav{padding:8px 8px 8px 14px!important}.nav nav a{padding:8px 10px!important;font-size:13px}.brand{font-size:15px!important}}
+
+
+/* ===== PALETTES PAR PAGE — modifiez --p1 / --p2 (et les valeurs rgb) pour changer la couleur d'une page ===== */
+body.th-habillage{--p1:#EF4444;--p2:#F97316;--p1r:239,68,68;--p2r:249,115,22;--p1d:#AC3131;--p1m:#CE3A3A;--p1x:#6C1F1F;--p1l:#F58585;--p1ll:#F8ABAB;--p2d:#B35310;--p2l:#FBA468;--t1:#FDE9E9;--t2:#FEEEE3}  /* Rouge */
+body.th-menus{--p1:#F97316;--p2:#F43F5E;--p1r:249,115,22;--p2r:244,63,94;--p1d:#B35310;--p1m:#D66313;--p1x:#70340A;--p1l:#FBA468;--p1ll:#FCC096;--p2d:#B02D44;--p2l:#F88296;--t1:#FEEEE3;--t2:#FEE8EC}  /* Orange */
+body.th-carnet{--p1:#D97706;--p2:#FACC15;--p1r:217,119,6;--p2r:250,204,21;--p1d:#9C5604;--p1m:#BB6605;--p1x:#623603;--p1l:#E6A75D;--p1ll:#EEC28F;--p2d:#B4930F;--p2l:#FCDE67;--t1:#FAEFE1;--t2:#FEF9E3}  /* Ambre */
+body.th-papier{--p1:#65A30D;--p2:#14B8A6;--p1r:101,163,13;--p2r:20,184,166;--p1d:#497509;--p1m:#578C0B;--p1x:#2D4906;--p1l:#9BC362;--p1ll:#BAD692;--p2d:#0E8478;--p2l:#66D1C5;--t1:#EDF4E2;--t2:#E3F6F4}  /* Lime */
+body.th-tshirts{--p1:#16A34A;--p2:#10B981;--p1r:22,163,74;--p2r:16,185,129;--p1d:#107535;--p1m:#138C40;--p1x:#0A4921;--p1l:#68C389;--p1ll:#96D6AE;--p2d:#0C855D;--p2l:#64D2AD;--t1:#E3F4E9;--t2:#E2F7F0}  /* Vert */
+body.th-goodies{--p1:#0D9488;--p2:#38BDF8;--p1r:13,148,136;--p2r:56,189,248;--p1d:#096B62;--p1m:#0B7F75;--p1x:#06433D;--p1l:#62B9B2;--p1ll:#92CFC9;--p2d:#2888B3;--p2l:#7ED4FA;--t1:#E2F2F1;--t2:#E7F7FE}  /* Turquoise */
+body.th-camera{--p1:#334155;--p2:#F43F5E;--p1r:51,65,85;--p2r:244,63,94;--p1d:#252F3D;--p1m:#2C3849;--p1x:#171D26;--p1l:#7A8490;--p1ll:#A3AAB2;--p2d:#B02D44;--p2l:#F88296;--t1:#E7E8EB;--t2:#FEE8EC}  /* Ardoise */
+body.th-grandformat{--p1:#0EA5E9;--p2:#6366F1;--p1r:14,165,233;--p2r:99,102,241;--p1d:#0A77A8;--p1m:#0C8EC8;--p1x:#064A69;--p1l:#62C4F1;--p1ll:#93D6F5;--p2d:#4749AE;--p2l:#9A9CF6;--t1:#E2F4FC;--t2:#ECEDFD}  /* Bleu ciel */
+body.th-cartevisite{--p1:#2563EB;--p2:#06B6D4;--p1r:37,99,235;--p2r:6,182,212;--p1d:#1B47A9;--p1m:#2055CA;--p1x:#112D6A;--p1l:#719AF2;--p1ll:#9DB9F6;--p2d:#048399;--p2l:#5DD0E3;--t1:#E5ECFD;--t2:#E1F6FA}  /* Bleu royal */
+body.th-cartespvc{--p1:#4F46E5;--p2:#A855F7;--p1r:79,70,229;--p2r:168,85,247;--p1d:#3932A5;--p1m:#443CC5;--p1x:#241F67;--p1l:#8D87EE;--p1ll:#B0ACF3;--p2d:#793DB2;--p2l:#C690FA;--t1:#EAE9FC;--t2:#F5EBFE}  /* Indigo */
+body.th-rollup{--p1:#7C3AED;--p2:#EC4899;--p1r:124,58,237;--p2r:236,72,153;--p1d:#592AAB;--p1m:#6B32CC;--p1x:#381A6B;--p1l:#AA7FF3;--p1ll:#C4A6F7;--p2d:#AA346E;--p2l:#F388BD;--t1:#EFE7FD;--t2:#FDE9F3}  /* Violet */
+body.th-enseignes{--p1:#C026D3;--p2:#F97316;--p1r:192,38,211;--p2r:249,115,22;--p1d:#8A1B98;--p1m:#A521B5;--p1x:#56115F;--p1l:#D672E2;--p1ll:#E39DEB;--p2d:#B35310;--p2l:#FBA468;--t1:#F7E5FA;--t2:#FEEEE3}  /* Magenta */
+body.th-flyers{--p1:#DB2777;--p2:#F59E0B;--p1r:219,39,119;--p2r:245,158,11;--p1d:#9E1C56;--p1m:#BC2266;--p1x:#631236;--p1l:#E873A7;--p1ll:#EF9EC2;--p2d:#B07208;--p2l:#F8C060;--t1:#FBE5EF;--t2:#FEF3E2}  /* Rose */
+body.th-tampons{--p1:#1E3A8A;--p2:#3B82F6;--p1r:30,58,138;--p2r:59,130,246;--p1d:#162A63;--p1m:#1A3277;--p1x:#0D1A3E;--p1l:#6D7FB3;--p1ll:#9AA6CA;--p2d:#2A5EB1;--p2l:#80AEF9;--t1:#E4E7F1;--t2:#E7F0FE}  /* Bleu encre */
+
+/* ===== Halos flous animés (le « flow ») — couleurs de la page ===== */
+@keyframes ppflow{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-34px,30px) scale(1.12)}}
+@keyframes ppflow2{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(40px,-26px) scale(1.15)}}
+.hero{overflow:hidden!important;isolation:isolate}
+.hero::before,.hero::after{content:"";position:absolute;border-radius:50%;pointer-events:none;z-index:0}
+.hero::before{width:480px;height:480px;top:-150px;right:-90px;background:var(--p1)!important;filter:blur(90px)!important;opacity:.42!important;animation:ppflow 12s ease-in-out infinite}
+.hero::after{width:380px;height:380px;bottom:-170px;left:6%;background:var(--p2)!important;filter:blur(90px)!important;opacity:.38!important;animation:ppflow2 14s ease-in-out infinite}
+.hero .container{position:relative;z-index:2}
+.hero{background:linear-gradient(135deg,rgba(var(--p1r),.10),rgba(var(--p2r),.06) 60%,transparent)!important}
+body{background:radial-gradient(1000px 640px at 0% 0%,rgba(var(--p1r),.16),transparent 62%),radial-gradient(900px 640px at 100% 8%,rgba(var(--p2r),.15),transparent 62%),#F8FAFC!important}
+.badge::before{background:var(--p1)!important}
+.nav a.back:hover{color:var(--p1d)!important}
+@media(prefers-reduced-motion:reduce){.hero::before,.hero::after{animation:none}}
+
+/* ===== Mobile : en-tête compact (logo + bouton Devis), aucun défilement horizontal ===== */
+html,body{max-width:100%;overflow-x:hidden}
+@media(max-width:600px){
+ header .nav,header.scrolled .nav{gap:8px;padding:8px 8px 8px 14px!important;width:calc(100% - 24px)}
+ .brand{white-space:nowrap;font-size:14px!important;min-width:0;gap:8px}
+ .brand .mark,.brand .mark img,.brand .mark svg{width:26px;height:26px}
+ .nav nav{gap:0;flex:none}
+ .nav nav a:not(.nav-cta):not(.back){display:none!important}
+ .nav nav a.nav-cta{padding:9px 16px!important}
+}
+
+</style>
+<link rel="icon" href="icon_logo_symbole.ico">
+</head>
+<body class="th-flyers">
+<div class="progress" id="progress"></div>
+<header id="top">
+  <div class="container nav">
+    <a class="brand" href="index.html" aria-label="The Printing Yassin"><span class="mark"><img src="icon_logo_symbole.ico" alt="" width="30" height="30" onerror="this.remove()"><svg viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#10B981"/><stop offset="1" stop-color="#0EA5E9"/></linearGradient></defs><rect width="32" height="32" rx="9" fill="url(#lg)"/><path d="M10 13V8h12v5M10 22H8.5A1.5 1.5 0 0 1 7 20.5v-5A1.5 1.5 0 0 1 8.5 14h15a1.5 1.5 0 0 1 1.5 1.5v5a1.5 1.5 0 0 1-1.5 1.5H22" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><rect x="10" y="19" width="12" height="6" rx="1" fill="#fff"/></svg></span>The Printing <span>Yassin</span></a>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="index.html#catalogue">Catalogue</a>
+      <a class="nav-cta" href="devis.html">Devis</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="badge reveal-h">Reprographie</span>
+      <h1 class="reveal-h" style="--d:.1s">Flyers, Affiches &amp; Brochures sur Mesure</h1>
+      <p class="reveal-h" style="--d:.2s">Donnez de la visibilité à votre entreprise grâce à nos impressions professionnelles de flyers, affiches et brochures. Choisissez le format, le papier, le grammage et la finition qui correspondent à votre projet.</p>
+      <p class="reveal-h" style="--d:.3s"><strong>Préparez votre commande en quelques clics</strong>, ajoutez les produits au panier, puis cliquez sur « Intégrer au devis » pour recevoir une offre adaptée à vos besoins et à vos quantités.</p>
+      <div class="hero-cta reveal-h" style="--d:.4s">
+        <a class="cta cta-y" href="#produits"><i class="fa-solid fa-cart-plus"></i> Voir les produits</a>
+        <a class="cta cta-g" href="devis.html"><i class="fa-solid fa-file-invoice"></i> Demander un devis</a>
+      </div>
+    </div>
+    <div class="stage reveal-h" style="--d:.3s" aria-hidden="true"><div class="orbit"><div class="ring r1"></div><div class="ring r2"></div><div class="core"><i class="fa-solid fa-file-lines"></i></div><div class="sat s1"><span><i class="fa-solid fa-book-open"></i></span></div><div class="sat s2"><span><i class="fa-solid fa-image"></i></span></div><div class="sat s3"><span><i class="fa-solid fa-bullhorn"></i></span></div></div></div>
+  </div>
+</section>
+
+<section class="perks">
+  <div class="container">
+    <div class="perk reveal" style="--d:0.0s"><i class="fa-solid fa-ruler-combined"></i><div><strong>Tous formats</strong><span>Du flyer à l’affiche</span></div></div>
+    <div class="perk reveal" style="--d:0.1s"><i class="fa-solid fa-layer-group"></i><div><strong>Papier &amp; grammage</strong><span>Au choix selon le projet</span></div></div>
+    <div class="perk reveal" style="--d:0.2s"><i class="fa-solid fa-wand-magic-sparkles"></i><div><strong>Finitions soignées</strong><span>Un rendu professionnel</span></div></div>
+  </div>
+</section>
+
+<main class="container" id="produits"><section class="grid">
+
+
+
+
+
+
+<article class="card reveal" style="--d:0.0s">
+
+  <div class="image-slot">
+    <i class="fa-solid fa-image ph"></i>
+
+
+<img
+  src="flyer/flyer-a4.jpg"
+  alt="Flyer A4 personnalisé professionnel"
+  onerror="this.style.display='none';this.parentNode.classList.add('noimg')"
+>
+
+  </div>
+
+  <div class="card-body">
+
+<span class="badge">Reprographie</span>
+
+<h2>
+  Flyer A4 Personnalisé
+</h2>
+
+<div class="editable-script">
+  <strong>
+    Flyer A4 + Conception incluse : Nous assurons la création graphique,
+    la personnalisation et l'impression haute qualité de vos flyers
+    pour promouvoir votre activité, vos produits ou vos événements !
+  </strong>
+</div>
+
+<p>
+  Format A4 adapté à vos besoins de communication.
+  Saisissez vos données sur le devis.
+</p>
+
+
+
+<div class="actions">
+
+  <input
+    id="qty-flyer-a4"
+    class="quantity"
+    type="number"
+    min="1"
+    value="1"
+    aria-label="Quantité Flyer A4"
+  >
+
+  <button
+    class="btn btn-primary"
+    onclick="addToCart(this)"
+  >
+    <i class="fa-solid fa-cart-plus"></i>
+    Ajouter au panier
+  </button>
+
+</div>
+
+
+  </div>
+
+</article>
+
+
+<article class="card reveal" style="--d:0.0s">
+
+  <div class="image-slot">
+    <i class="fa-solid fa-image ph"></i>
+
+
+<img
+  src="flyer/flyer-a5.jpg"
+  alt="Flyer A5 personnalisé professionnel"
+  onerror="this.style.display='none';this.parentNode.classList.add('noimg')"
+>
+
+  </div>
+
+  <div class="card-body">
+
+<span class="badge">Reprographie</span>
+
+<h2>
+  Flyer A5 Personnalisé
+</h2>
+
+<div class="editable-script">
+  <strong>
+    Flyer A5 + Conception incluse : Nous assurons la création graphique,
+    la personnalisation et l'impression haute qualité de vos flyers
+    pour promouvoir votre activité, vos produits ou vos événements !
+  </strong>
+</div>
+
+<p>
+  Format A5 adapté à vos besoins de communication.
+  Saisissez vos données sur le devis.
+</p>
+
+
+
+<div class="actions">
+
+  <input
+    id="qty-flyer-a5"
+    class="quantity"
+    type="number"
+    min="1"
+    value="1"
+    aria-label="Quantité Flyer A5"
+  >
+
+  <button
+    class="btn btn-primary"
+    onclick="addToCart(this)"
+  >
+    <i class="fa-solid fa-cart-plus"></i>
+    Ajouter au panier
+  </button>
+
+</div>
+
+  </div>
+
+</article>
+
+<article class="card reveal" style="--d:0.0s">
+
+  <div class="image-slot">
+    <i class="fa-solid fa-image ph"></i>
+
+<img
+  src="flyer/flyer-a6.jpg"
+  alt="Flyer A6 personnalisé professionnel"
+  onerror="this.style.display='none';this.parentNode.classList.add('noimg')"
+>
+
+  </div>
+
+  <div class="card-body">
+
+<span class="badge">Reprographie</span>
+
+<h2>
+  Flyer A6 Personnalisé
+</h2>
+
+<div class="editable-script">
+  <strong>
+    Flyer A6 + Conception incluse : Nous assurons la création graphique,
+    la personnalisation et l'impression haute qualité de vos flyers
+    pour promouvoir votre activité, vos produits ou vos événements !
+  </strong>
+</div>
+
+<p>
+  Format A6 adapté à vos besoins de communication.
+  Saisissez vos données sur le devis.
+</p>
+
+
+
+<div class="actions">
+
+  <input
+    id="qty-flyer-a6"
+    class="quantity"
+    type="number"
+    min="1"
+    value="1"
+    aria-label="Quantité Flyer A6"
+  >
+
+  <button
+    class="btn btn-primary"
+    onclick="addToCart(this)"
+  >
+    <i class="fa-solid fa-cart-plus"></i>
+    Ajouter au panier
+  </button>
+
+</div>
+
+  </div>
+
+</article>
+
+
+<article class="card reveal" style="--d:0.0s">
+
+  <div class="image-slot">
+    <i class="fa-solid fa-image ph"></i>
+
+
+<img
+  src="flyer/affiche.jpg"
+  alt="Affiche personnalisée professionnelle"
+  onerror="this.style.display='none';this.parentNode.classList.add('noimg')"
+>
+
+
+  </div>
+
+  <div class="card-body">
+
+
+<span class="badge">Reprographie</span>
+
+<h2>
+  Affiche Personnalisée 
+</h2>
+
+<div class="editable-script">
+  <strong>
+    Affiche + Conception incluse : Nous assurons la création graphique,
+    la personnalisation et l'impression haute qualité de vos affiches
+    pour vos événements, promotions, publicités et campagnes de communication !
+  </strong>
+</div>
+
+<p>
+  Choisissez les dimensions souhaitées pour votre affiche :
+</p>
+
+
+
+
+<p>
+  Saisissez vos dimensions et vos données sur le devis.
+</p>
+
+
+<!-- =====================================================
+     QUANTITÉ + PANIER
+====================================================== -->
+
+<div class="actions">
+
+  <input
+    id="qty-affiche"
+    class="quantity"
+    type="number"
+    min="1"
+    value="1"
+    aria-label="Quantité affiche"
+  >
+
+  <button
+    class="btn btn-primary"
+    onclick="addToCart(this)"
+  >
+    <i class="fa-solid fa-cart-plus"></i>
+    Ajouter au panier
+  </button>
+
+</div>
+
+
+  </div>
+
+</article>
+
+<article class="card reveal" style="--d:0.0s">
+  <div class="image-slot">
+    <i class="fa-solid fa-image ph"></i>
+
+
+<!-- Image de la brochure -->
+<img
+  src="flyer/brochure.jpg"
+  alt="Brochure personnalisée professionnelle"
+  onerror="this.style.display='none';this.parentNode.classList.add('noimg')"
+>
+
+
+  </div>
+
+  <div class="card-body">
+
+
+<span class="badge">Flyers &amp; Brochures</span>
+
+<h2>Brochure Personnalisée</h2>
+
+<div class="editable-script">
+  <strong>
+    Brochure + Conception incluse : Nous assurons la création graphique,
+    la personnalisation et l'impression haute qualité de vos brochures
+    pour présenter vos produits, services, offres et activités professionnelles.
+  </strong>
+</div>
+
+<p>
+  Saisissez vos données sur le devis.
+</p>
+
+<div class="actions">
+
+  <input
+    id="qty-brochure"
+    class="quantity"
+    type="number"
+    min="1"
+    value="1"
+    aria-label="Quantité de brochures"
+  >
+
+  <button
+    class="btn btn-primary"
+    onclick="addToCart(this)"
+  >
+    <i class="fa-solid fa-cart-plus"></i>
+    Ajouter au panier
+  </button>
+
+</div>
+
+
+  </div>
+</article>
+
+
+
+
+
+
+
+
+</section></main>
+
+<button class="cart-btn" id="cartBtn" onclick="openCart()"><i class="fa-solid fa-cart-shopping"></i> <span class="lbl">Panier</span> <span id="count" class="count">0</span></button>
+<div id="cartModal" class="modal" onclick="closeCart(event)">
+  <div class="modal-box" onclick="event.stopPropagation()">
+    <button class="close" type="button" onclick="closeCart()" aria-label="Fermer"><i class="fa-solid fa-xmark"></i></button>
+    <div class="cart-modal-title"><i class="fa-solid fa-cart-shopping"></i><div><span class="badge">Panier</span><h2>Votre sélection</h2></div></div>
+    <div id="cartItems"></div>
+    <div style="display:flex;gap:10px;margin-top:20px;flex-wrap:wrap">
+      <button class="btn btn-primary" type="button" onclick="goToQuote()"><i class="fa-solid fa-file-invoice"></i> Intégrer au devis</button>
+      <button class="btn btn-secondary" type="button" onclick="clearCart()"><i class="fa-solid fa-trash"></i> Vider le panier</button>
+    </div>
+  </div>
+</div>
+<div id="imageLightbox" class="image-lightbox" onclick="if(event.target===this)closeImage()">
+  <button type="button" onclick="closeImage()" aria-label="Fermer"><i class="fa-solid fa-xmark"></i></button>
+  <img id="lightboxImage" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="">
+</div>
+<div class="toast" id="toast" role="status"><i class="fa-solid fa-circle-check"></i> Produit ajouté au panier</div>
+
+<script>
+const CART_KEY = 'printingYassinCart';
+function getCart(){try{return JSON.parse(localStorage.getItem(CART_KEY))||[]}catch(e){return[]}}
+function saveCart(cart){try{localStorage.setItem(CART_KEY,JSON.stringify(cart))}catch(e){}updateCount()}
+function escapeHtml(text){return String(text??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]))}
+function toast(){const t=document.getElementById('toast');t.classList.add('show');clearTimeout(t._h);t._h=setTimeout(()=>t.classList.remove('show'),1800)}
+function addToCart(index){
+ const btn=event.currentTarget, card=btn.closest('.card'); if(!card)return;
+ const name=(card.querySelector('h2')?.textContent||'Produit').trim();
+ const category=(card.querySelector('.badge')?.textContent||'').trim();
+ const script=(card.querySelector('.editable-script')?.textContent||'').trim();
+ const other=Array.from(card.querySelectorAll('p')).map(x=>x.textContent.trim()).filter(Boolean).join(' | ');
+ const img=card.querySelector('.image-slot img');
+ const image=img?.getAttribute('src')||'';
+ const qtyInput=card.querySelector('.quantity'); const qty=Math.max(1,parseInt(qtyInput?.value||'1',10)||1);
+ const product={name,category,description:script,other,image,quantity:qty,serviceValue:[category,name].filter(Boolean).join(' — ')};
+ const cart=getCart(); const existing=cart.find(x=>x.name===name && x.category===category);
+ if(existing){existing.quantity+=qty;existing.description=script;existing.other=other;existing.image=image}
+ else cart.push(product);
+ saveCart(cart);
+ /* animations de confirmation */
+ const old=btn.innerHTML; btn.classList.add('added'); btn.innerHTML='<i class="fa-solid fa-check"></i> Ajouté';
+ setTimeout(()=>{btn.classList.remove('added');btn.innerHTML=old},1400);
+ const cb=document.getElementById('cartBtn'); cb.classList.remove('bump'); void cb.offsetWidth; cb.classList.add('bump');
+ toast();
+}
+function updateCount(){const el=document.getElementById('count');if(el)el.textContent=getCart().reduce((s,x)=>s+Number(x.quantity||1),0)}
+function renderCart(){
+ const box=document.getElementById('cartItems'),cart=getCart(); if(!box)return;
+ if(!cart.length){box.innerHTML='<div class="empty-cart"><i class="fa-solid fa-cart-shopping"></i><h3>Votre panier est vide</h3><p>Ajoutez des produits pour les retrouver ici.</p></div>';return}
+ box.innerHTML=cart.map((x,i)=>`<div class="cart-item-rich" style="animation-delay:${i*.06}s">
+   <div class="cart-thumb">${x.image?`<img src="${escapeHtml(x.image)}" alt="">`:'<i class="fa-solid fa-image"></i>'}</div>
+   <div class="cart-info"><span class="cart-category">${escapeHtml(x.category||'Produit')}</span><strong>${escapeHtml(x.name)}</strong><small>${escapeHtml(x.description||x.other||'')}</small></div>
+   <input class="quantity" type="number" min="1" value="${Number(x.quantity||1)}" onchange="changeQty(${i},this.value)" aria-label="Quantité">
+   <button class="cart-delete" onclick="removeItem(${i})" aria-label="Supprimer"><i class="fa-solid fa-trash"></i></button>
+ </div>`).join('');
+}
+function changeQty(i,v){const c=getCart();if(!c[i])return;c[i].quantity=Math.max(1,parseInt(v,10)||1);saveCart(c);renderCart()}
+function removeItem(i){const c=getCart();c.splice(i,1);saveCart(c);renderCart()}
+function clearCart(){try{localStorage.removeItem(CART_KEY)}catch(e){}updateCount();renderCart()}
+function openCart(){renderCart();document.getElementById('cartModal')?.classList.add('open')}
+function closeCart(event){if(event&&event.target!==event.currentTarget)return;document.getElementById('cartModal')?.classList.remove('open')}
+function goToQuote(){
+ if(!getCart().length){alert('Votre panier est vide.');return}
+ /* Le panier reste uniquement dans le panier. Rien n’est transféré au devis ici. */
+ window.location.href='devis.html';
+}
+function openImage(src,alt){if(!src)return;const m=document.getElementById('imageLightbox'),im=document.getElementById('lightboxImage');im.src=src;im.alt=alt||'';m.classList.add('open')}
+function closeImage(){document.getElementById('imageLightbox')?.classList.remove('open')}
+
+document.addEventListener('DOMContentLoaded',()=>{
+ updateCount();
+ document.querySelectorAll('.image-slot img').forEach(img=>{img.addEventListener('click',()=>{if(img.getAttribute('src'))openImage(img.getAttribute('src'),img.alt)});img.style.cursor='zoom-in'});
+ /* apparition au scroll */
+ const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+ document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+ /* inclinaison 3D des cartes produit */
+ if(!matchMedia('(prefers-reduced-motion:reduce)').matches && matchMedia('(hover:hover)').matches){
+  document.querySelectorAll('.card').forEach(c=>{
+   c.addEventListener('mousemove',e=>{const r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transform=`perspective(900px) rotateY(${x*1.5}deg) rotateX(${-y*1.5}deg) translateY(-2px)`});
+   c.addEventListener('mouseleave',()=>{c.style.transform=''});
+  });
+ }
+});
+/* en-tête + barre de progression */
+addEventListener('scroll',()=>{
+ const h=document.documentElement,s=h.scrollTop,m=h.scrollHeight-h.clientHeight;
+ document.getElementById('progress').style.width=(m>0?s/m*100:0)+'%';
+ document.getElementById('top').classList.toggle('scrolled',s>30);
+},{passive:true});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeImage();closeCart()}});
+</script>
+<footer><div class="container">© 2026 The Printing Yassin — Imprimerie &amp; Services Publicitaires à Nador</div></footer>
+<script>
+/* ===== CONFIGURATION — modifiez ici ===== */
+window.PP_CONFIG = {
+  brand: "The Printing Yassin",
+  whatsapp: "212606082624",   // numéro WhatsApp qui reçoit les devis (format international, sans + ni espaces)
+  cartKey: "pp_cart_v2"
+};
+
+</script>
+<script>
+/* The Printing Yassin — Panier, options produit, devis WhatsApp */
+(function () {
+"use strict";
+const C = window.PP_CONFIG, PP = window.PP = {};
+const $ = (s, r) => (r || document).querySelector(s), $$ = (s, r) => [...(r || document).querySelectorAll(s)];
+const esc = t => String(t == null ? "" : t).replace(/[&<>"']/g, m => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[m]));
+
+/* ---------- Stockage robuste (localStorage → sessionStorage → window.name) ---------- */
+function readAll() {
+  const out = [];
+  try { out.push(JSON.parse(localStorage.getItem(C.cartKey))); } catch (e) {}
+  try { out.push(JSON.parse(sessionStorage.getItem(C.cartKey))); } catch (e) {}
+  try { if (window.name.indexOf("PPCART:") === 0) out.push(JSON.parse(window.name.slice(7))); } catch (e) {}
+  return out.filter(x => x && Array.isArray(x.items)).sort((a, b) => b.t - a.t)[0] || { t: 0, items: [] };
+}
+function writeAll(items) {
+  const d = JSON.stringify({ t: Date.now(), items });
+  try { localStorage.setItem(C.cartKey, d); } catch (e) {}
+  try { sessionStorage.setItem(C.cartKey, d); } catch (e) {}
+  try { window.name = "PPCART:" + d; } catch (e) {}
+}
+const listeners = [];
+PP.items = () => readAll().items;
+PP.count = () => PP.items().reduce((s, x) => s + (+x.qty || 0), 0);
+function commit(items) { writeAll(items); listeners.forEach(f => f()); refreshBadges(); }
+PP.onChange = f => listeners.push(f);
+PP.add = function (it) {
+  const items = PP.items(), id = it.name + "|" + JSON.stringify(it.opts) + "|" + (it.note || "");
+  const ex = items.find(x => x.id === id);
+  if (ex) ex.qty += it.qty; else items.push(Object.assign({ id }, it));
+  commit(items);
+};
+PP.setQty = (id, q) => { const it = PP.items(); const x = it.find(i => i.id === id); if (!x) return; x.qty = Math.max(x.min || 1, Math.round(+q) || x.min || 1); commit(it); };
+PP.remove = id => { const it = PP.items(), i = it.findIndex(x => x.id === id); if (i < 0) return; PP._undo = it.splice(i, 1)[0]; PP._undoAt = i; commit(it); toast("Article retiré", "Annuler", () => { const c = PP.items(); c.splice(PP._undoAt, 0, PP._undo); commit(c); }); };
+PP.setNote = (id, n) => { const it = PP.items(), x = it.find(i => i.id === id); if (x) { x.note2 = n; writeAll(it); } };
+PP.clear = () => commit([]);
+
+/* ---------- Toast ---------- */
+function toast(msg, actionLabel, action) {
+  let t = $("#pp-toast"); if (!t) { t = document.createElement("div"); t.id = "pp-toast"; t.setAttribute("role", "status"); document.body.appendChild(t); }
+  t.innerHTML = "<span>" + esc(msg) + "</span>" + (actionLabel ? "<button type='button'>" + esc(actionLabel) + "</button>" : "");
+  if (actionLabel) t.lastChild.onclick = () => { action(); t.classList.remove("show"); };
+  t.classList.add("show"); clearTimeout(t._h); t._h = setTimeout(() => t.classList.remove("show"), 3500);
+}
+PP.toast = toast;
+
+/* ---------- Rendu des lignes du panier (drawer + page devis) ---------- */
+PP.renderItems = function (box) {
+  const items = PP.items();
+  if (!items.length) { box.innerHTML = "<div class='pp-empty'><i class='fa-solid fa-basket-shopping'></i><h3>Votre panier est vide</h3><p>Parcourez le catalogue, choisissez vos options puis ajoutez vos articles.</p><a class='pp-btn pp-btn-p' href='" + PP.home + "#catalogue'>Voir le catalogue</a></div>"; return; }
+  box.innerHTML = items.map(x => {
+    const step = x.step || 1;
+    return "<div class='pp-row' data-id='" + esc(x.id) + "'>" +
+      "<div class='pp-thumb'>" + (x.image ? "<img src='" + esc(x.image) + "' alt='' onerror=\"this.remove()\">" : "<i class='fa-solid fa-image'></i>") + "</div>" +
+      "<div class='pp-info'><small>" + esc(x.category) + "</small><strong>" + esc(x.name) + "</strong>" +
+      "<div class='pp-tags'>" + x.opts.map(o => "<span><b>" + esc(o[0]) + " :</b> " + esc(o[1]) + "</span>").join("") + "</div>" +
+      (x.note ? "<p class='pp-n'>« " + esc(x.note) + " »</p>" : "") + "</div>" +
+      "<div class='pp-ctl'><div class='pp-step'><button type='button' data-act='dec' aria-label='Diminuer'>−</button>" +
+      "<input type='number' min='" + (x.min || 1) + "' step='" + step + "' value='" + x.qty + "' data-act='qty' aria-label='Quantité'>" +
+      "<button type='button' data-act='inc' aria-label='Augmenter'>+</button></div>" +
+      "<span class='pp-unit'>" + esc(x.unit || "unité(s)") + "</span>" +
+      "<button type='button' class='pp-del' data-act='del' aria-label='Supprimer'><i class='fa-solid fa-trash'></i></button></div></div>";
+  }).join("");
+};
+function bindItems(box) {
+  box.addEventListener("click", e => { const b = e.target.closest("[data-act]"); if (!b) return; const row = b.closest(".pp-row"); if (!row) return; const id = row.dataset.id, x = PP.items().find(i => i.id === id); if (!x) return;
+    if (b.dataset.act === "inc") PP.setQty(id, x.qty + (x.step || 1)); if (b.dataset.act === "dec") PP.setQty(id, x.qty - (x.step || 1)); if (b.dataset.act === "del") PP.remove(id); });
+  box.addEventListener("change", e => { if (e.target.dataset.act === "qty") { const row = e.target.closest(".pp-row"); PP.setQty(row.dataset.id, e.target.value); } });
+}
+PP.mount = function (box) { bindItems(box); const r = () => PP.renderItems(box); PP.onChange(r); r(); };
+
+/* ---------- Drawer panier ---------- */
+const drawerHTML = "<div id='pp-ov' class='pp-ov'></div><aside id='pp-drawer' class='pp-drawer' aria-hidden='true' aria-label='Panier'>" +
+  "<header><div><small>Votre sélection</small><h2>Panier <span id='pp-dc'></span></h2></div><button type='button' id='pp-x' aria-label='Fermer'><i class='fa-solid fa-xmark'></i></button></header>" +
+  "<div id='pp-list' class='pp-list'></div><footer id='pp-foot'><p>Les tarifs vous seront communiqués dans votre devis, sans engagement.</p>" +
+  "<a class='pp-btn pp-btn-p pp-block' href='" + "devis.html" + "'><i class='fa-solid fa-file-invoice'></i> Demander mon devis</a>" +
+  "<div class='pp-two'><button type='button' class='pp-btn pp-btn-g' id='pp-cont'>Continuer mes achats</button><button type='button' class='pp-btn pp-btn-g' id='pp-clr'>Vider</button></div></footer></aside>";
+PP.open = function () { buildUI(); $("#pp-drawer").classList.add("open"); $("#pp-ov").classList.add("open"); $("#pp-drawer").setAttribute("aria-hidden", "false"); document.body.classList.add("pp-lock"); PP.renderItems($("#pp-list")); refreshBadges(); };
+PP.close = function () { const d = $("#pp-drawer"); if (!d) return; d.classList.remove("open"); $("#pp-ov").classList.remove("open"); d.setAttribute("aria-hidden", "true"); document.body.classList.remove("pp-lock"); };
+function buildUI() {
+  if ($("#pp-drawer")) return;
+  const w = document.createElement("div"); w.innerHTML = drawerHTML; while (w.firstChild) document.body.appendChild(w.firstChild);
+  $("#pp-x").onclick = $("#pp-ov").onclick = $("#pp-cont").onclick = PP.close;
+  $("#pp-clr").onclick = () => { if (PP.items().length && confirm("Vider tout le panier ?")) PP.clear(); };
+  document.addEventListener("keydown", e => { if (e.key === "Escape") PP.close(); });
+  bindItems($("#pp-list")); PP.onChange(() => { if ($("#pp-drawer").classList.contains("open")) PP.renderItems($("#pp-list")); });
+}
+function refreshBadges() {
+  const n = PP.count(), it = PP.items().length;
+  $$("#pp-fab-n,#pp-dc,#main-cart-count,#count").forEach(e => { e.textContent = e.id === "pp-dc" ? (it ? "(" + it + ")" : "") : n; });
+  const f = $("#pp-foot"); if (f) f.style.display = it ? "" : "none";
+}
+PP.home = /devis\.html/.test(location.pathname) ? "index.html" : "index.html";
+
+/* ---------- Message WhatsApp ---------- */
+PP.buildMessage = function (c) {
+  const items = PP.items(), d = new Date(), pad = n => String(n).padStart(2, "0");
+  const ref = "DV-" + String(d.getFullYear()).slice(2) + pad(d.getMonth() + 1) + pad(d.getDate()) + "-" + pad(d.getHours()) + pad(d.getMinutes());
+  let m = "*DEMANDE DE DEVIS — " + C.brand + "*\nRéf. " + ref + " • " + pad(d.getDate()) + "/" + pad(d.getMonth() + 1) + "/" + d.getFullYear() + "\n\n";
+  m += "*👤 Client*\n• Nom : " + c.name + "\n" + (c.company ? "• Société : " + c.company + "\n" : "") + "• Téléphone : " + c.phone + "\n" + (c.email ? "• Email : " + c.email + "\n" : "") + "• Ville : " + c.city + "\n\n";
+  m += "*🧾 Articles (" + items.length + ")*\n";
+  items.forEach((x, i) => { m += "\n*" + (i + 1) + ". " + x.name + "*\n• Quantité : " + x.qty + " " + (x.unit || "") + "\n"; x.opts.forEach(o => m += "• " + o[0] + " : " + o[1] + "\n"); if (x.note) m += "• Précision : " + x.note + "\n"; });
+  m += "\n*📦 Livraison / délai*\n• Mode : " + c.mode + "\n• Délai souhaité : " + c.delay + "\n";
+  if (c.msg) m += "\n*💬 Remarques*\n" + c.msg + "\n";
+  m += "\n✅ Merci de me confirmer le *prix* et le *délai*. Je peux vous envoyer mes fichiers/logo ici même.";
+  return m.trim();
+};
+PP.waLink = msg => "https://wa.me/" + C.whatsapp + "?text=" + encodeURIComponent(msg);
+
+/* ---------- Options produit ---------- */
+const G = (l, c, o) => Object.assign({ l, c, t: "radio" }, o || {});
+const CHK = (l, c, o) => G(l, c, Object.assign({ t: "check" }, o));
+const TXT = (l, ph) => G(l, [], { t: "text", ph });
+const DES = () => G("Design", ["J’ai mon fichier|prêt à imprimer", "Création du design|par notre studio"]);
+const IMP = () => G("Impression", ["Recto", "Recto / Verso"]);
+const PLAST = (dflt) => [G("Plastification", ["Non plastifié|papier nu", "Plastifié|protégé, lavable"], { d: dflt ? 1 : 0, id: "pl" }), G("Type de film", ["Mat", "Brillant", "Soft-touch"], { when: ["pl", "Plastifié"] })];
+const PEL = () => G("Pelliculage", ["Sans", "Mat", "Brillant"]);
+
+const TXTW = (l, ph, when) => G(l, [], { t: "text", ph, when });
+const DES2 = () => G("Design", ["J’ai mon fichier|logo / visuel prêt (vectoriel de préférence)", "Création du design|par notre studio", "Logo à redessiner|à partir d’une image / photo"]);
+const POSE = (extra) => [G("Pose", ["Fourniture seule", "Fourniture + pose|par notre équipe"], { id: "po" }), TXTW("Lieu et hauteur de pose", "Ex : façade rez-de-chaussée, ville, hauteur ≈ 4 m", ["po", "Fourniture + pose"])];
+const PRESTA = () => CHK("Prestations en plus", ["Visite technique|relevé de mesures sur place", "Aperçu / maquette|validation avant fabrication", "Dépose de l’ancienne enseigne"]);
+const LUM = (dflt) => G("Couleur de la lumière", ["Blanc froid|6500 K, très lumineux", "Blanc chaud|3000 K, ambiance", "Couleur unique|à préciser", "RGB|multicolore + télécommande"], { d: dflt || 0 });
+const ELEC = () => CHK("Électricité", ["Transformateur / alimentation inclus", "Variateur d’intensité", "Interrupteur / télécommande", "Minuterie / cellule crépusculaire"], { d: [0] });
+const SIGNTXT = () => TXT("Texte / nom à afficher", "Ex : Café Atlas — Boulangerie");
+const SIGNCOL = () => TXT("Couleurs souhaitées", "Ex : rouge #E30613 + blanc, selon votre logo");
+const FMT_SM = (a) => G("Format", a.concat(["Sur mesure|dimensions à préciser"]), { id: "fm", d: 1 });
+const DIMW = (u) => TXTW("Dimensions exactes (L × H en cm)", "Ex : 250 × 70", ["fm", "Sur mesure"]);
+const L = [
+ [/croix/, { u: "croix", g: [
+   G("Taille de la croix", ["40 × 40 cm", "50 × 50 cm", "60 × 60 cm", "80 × 80 cm|le plus courant", "100 × 100 cm", "Sur mesure|à préciser"], { id: "fm", d: 3 }),
+   TXTW("Dimensions exactes (L × H en cm)", "Ex : 90 × 90", ["fm", "Sur mesure"]),
+   G("Modèle", ["Simple face|fixée à plat sur le mur", "Double face (drapeau)|visible des 2 côtés"]),
+   G("Couleur d’affichage", ["Vert|standard pharmacie", "Multicolore (RGB)|vert, rouge, bleu…"]),
+   G("Mode d’affichage", ["Croix fixe", "Croix animée|motifs et effets", "Croix animée + texte|heure, date, température, message"], { d: 1 }),
+   G("Commande", ["Télécommande", "Contrôleur programmable|clavier / appli"]),
+   G("Fixation", ["En drapeau sur façade", "À plat sur façade", "Sur mât / structure"]),
+   G("Alimentation", ["220 V secteur|transformateur inclus", "Autre|à préciser"]),
+   TXT("Texte à afficher (si croix animée)", "Ex : PHARMACIE AL AMAL — Garde"), ...POSE(), PRESTA(), DES2()] }],
+ [/enseigne.*(ronde|circulaire|rond)|(ronde|circulaire)/, { u: "enseigne(s)", g: [
+   G("Diamètre", ["Ø 40 cm", "Ø 50 cm", "Ø 60 cm|le plus courant", "Ø 80 cm", "Ø 100 cm", "Sur mesure|à préciser"], { id: "fm", d: 2 }),
+   TXTW("Diamètre exact (en cm)", "Ex : 70", ["fm", "Sur mesure"]),
+   G("Modèle", ["Double face (drapeau)|visible des 2 côtés de la rue", "Simple face|fixée à plat"], { d: 0 }),
+   G("Face visible", ["Acrylique opale imprimé|lumineux uniforme", "PVC / dibond imprimé|non éclairé", "Vinyle sur plexi|découpe logo"]),
+   G("Cadre / contour", ["Aluminium noir", "Aluminium gris anthracite", "Aluminium blanc", "Couleur sur mesure|à préciser"]),
+   G("Éclairage LED", ["LED blanc froid", "LED blanc chaud", "LED RGB|télécommande", "Sans éclairage"]),
+   G("Bras / support", ["Bras décoratif en volute|fer forgé", "Bras droit simple", "Console murale renforcée"]),
+   G("Usage", ["Extérieur|étanche", "Intérieur"]), SIGNTXT(), SIGNCOL(), ...POSE(), PRESTA(), DES2()] }],
+ [/fa[cç]ade|alucobond|aluminium composite|\bacp\b/, { u: "façade(s)", g: [
+   G("Matériau", ["Alucobond / ACP 3 mm|le plus courant", "Alucobond / ACP 4 mm|renforcé", "Dibond", "Aluminium alvéolaire", "Autre|à préciser"]),
+   G("Finition / couleur", ["Mat uni", "Brillant uni", "Aluminium brossé", "Imitation bois", "Couleur RAL|à préciser", "Imprimé|visuel / logo"]),
+   TXT("Couleur / référence (RAL, code)", "Ex : RAL 7016 anthracite"),
+   TXT("Dimensions de la façade (L × H en m)", "Ex : 6 × 3,5"),
+   TXT("Surface totale approximative (m²)", "Ex : 21 m²"),
+   G("Ossature / fixation", ["Ossature aluminium + panneaux", "Collage direct sur support", "Sur ossature existante", "Conseil technique|à définir"]),
+   CHK("Éléments à prévoir", ["Angles / pliages", "Découpes (vitrine, porte, climatiseur)", "Encadrement de vitrine", "Bandeau pour enseigne", "Éclairage LED intégré"]),
+   G("Pose", ["Fourniture seule", "Fourniture + pose|par notre équipe"], { id: "po" }),
+   TXTW("Lieu et hauteur de pose", "Ex : façade 2 étages, ville, hauteur ≈ 7 m", ["po", "Fourniture + pose"]),
+   CHK("Prestations en plus", ["Visite technique|relevé de mesures sur place", "Plan / aperçu 3D|validation avant fabrication", "Nacelle / échafaudage|accès en hauteur", "Dépose de l’ancien habillage"], { d: [0] }),
+   DES2()] }],
+ [/caisson|lightbox|bandeau lumineux|enseigne drapeau/, { u: "enseigne(s)", g: [
+   G("Modèle", ["Caisson simple face|fixé à plat sur façade", "Caisson double face|en drapeau, visible des 2 sens", "Bandeau lumineux|fin, au-dessus de la vitrine"]),
+   FMT_SM(["100 × 30 cm", "150 × 50 cm|le plus courant", "200 × 60 cm", "300 × 80 cm"]), DIMW(),
+   G("Face visible", ["Acrylique opale imprimé|rendu lumineux uniforme", "Bâche tendue rétro-éclairée|grandes dimensions", "Vinyle sur plexi|découpe lettres/logo"]),
+   G("Cadre / structure", ["Aluminium blanc", "Aluminium gris anthracite", "Aluminium noir", "Couleur sur mesure|à préciser"]),
+   G("Éclairage LED", ["LED blanc froid|6500 K", "LED blanc chaud|3000 K", "LED RGB|télécommande"]), ELEC(),
+   G("Fixation", ["Murale à plat", "En drapeau (perpendiculaire)", "Sur structure / toit", "Sur mât|totem"]),
+   G("Usage", ["Extérieur|étanche IP65", "Intérieur"]), SIGNTXT(), SIGNCOL(), ...POSE(), PRESTA(), DES2()] }],
+ [/enseigne.*\bled\b|enseigne lumineuse/, { u: "enseigne(s)", g: [
+   G("Type de fabrication", ["Forme découpée selon logo|contour lumineux sur mesure", "Panneau / caisson LED|fond plein", "Lettres + logo LED|éléments séparés"]),
+   G("Source lumineuse", ["Pixels LED|points lumineux, effet intense", "Modules LED + face acrylique|lumière diffuse", "Néon LED flexible|trait lumineux"]),
+   FMT_SM(["80 × 40 cm", "120 × 60 cm|le plus courant", "200 × 80 cm", "300 × 100 cm"]), DIMW(),
+   TXT("Forme / logo à reproduire", "Ex : lunettes, logo du magasin, nom stylisé"),
+   G("Couleur de la lumière", ["Blanc froid", "Blanc chaud", "Vert", "Rouge", "Bleu", "Multicolore (RGB)|télécommande"]),
+   CHK("Effets & électricité", ["Variateur d’intensité", "Clignotement / animation", "Télécommande", "Transformateur / alimentation inclus"], { d: [3] }),
+   G("Fixation", ["Murale à plat", "En drapeau", "Sur panneau / support", "Suspendue|vitrine"]),
+   G("Usage", ["Extérieur|étanche IP65", "Intérieur"]), SIGNTXT(), SIGNCOL(), ...POSE(), PRESTA(), DES2()] }],
+ [/lettres?[ -]?(bo[iî]tiers?|lumineuses?)|lettres?.*\bled\b/, { u: "enseigne(s)", g: [
+   G("Type de lettres", ["Boîtier éclairé en face|lumineux de face", "Boîtier contre-éclairé (halo)|lumière derrière la lettre", "Face + côté éclairés", "Relief non éclairé|lettres découpées 3D"], { d: 0 }),
+   G("Matière", ["Aluminium laqué", "Inox brossé / poli", "Acrylique / PVC expansé", "Laiton / doré|finition premium"]),
+   G("Hauteur des lettres", ["15 cm", "20 cm", "30 cm", "40 cm", "50 cm", "60 cm et +|à préciser"], { d: 2 }),
+   G("Profondeur / épaisseur", ["3 cm", "5 cm", "8 cm"], { d: 1 }),
+   SIGNTXT(), TXT("Nombre de lettres / logo", "Ex : 12 lettres + 1 logo"),
+   G("Police / typographie", ["Selon mon logo", "Police au choix du studio", "Police précise|à indiquer"]),
+   LUM(), ELEC(),
+   G("Fixation", ["Directe sur façade|gabarit de pose", "Sur rail / profilé aluminium", "Sur panneau (dibond / ACP)"]),
+   G("Usage", ["Extérieur|étanche", "Intérieur"]), SIGNCOL(), ...POSE(), PRESTA(), DES2()] }],
+ [/lettres?[ -]?(d[eé]coup[eé]es?|relief|3d)|lettres? (en )?(inox|aluminium|pvc|acrylique|plexi)/, { u: "enseigne(s)", g: [
+   G("Matière", ["PVC expansé|économique", "Acrylique / plexiglas|brillant", "Aluminium brossé|premium", "Inox brossé / poli", "Laiton / doré|finition premium"]),
+   G("Hauteur des lettres", ["10 cm", "15 cm", "20 cm", "30 cm", "40 cm", "50 cm et +|à préciser"], { d: 2 }),
+   G("Épaisseur des lettres", ["5 mm", "10 mm", "19 mm", "3 cm|relief marqué"], { d: 1 }),
+   G("Finition / couleur", ["Blanc", "Noir", "Doré / argenté", "Couleur sur mesure|à préciser"]),
+   SIGNTXT(), TXT("Nombre de lettres / logo", "Ex : 12 lettres + 1 logo"),
+   G("Police / typographie", ["Selon mon logo", "Police au choix du studio", "Police précise|à indiquer"]),
+   G("Fixation", ["Collage direct + gabarit de pose", "Sur entretoises (effet flottant)", "Sur panneau (dibond / ACP)"]),
+   G("Usage", ["Extérieur", "Intérieur"]), ...POSE(), PRESTA(), DES2()] }],
+ [/n[eé]on/, { u: "néon(s)", g: [
+   G("Type", ["Néon LED flexible|texte / logo", "Néon LED sur plexi|fond transparent", "Néon LED sur plexi noir|contraste fort"]),
+   TXT("Texte ou dessin du néon", "Ex : OPEN / nom de la boutique"),
+   FMT_SM(["60 × 30 cm", "80 × 40 cm", "100 × 50 cm", "150 × 60 cm"]), DIMW(),
+   G("Couleur du néon", ["Blanc froid", "Blanc chaud", "Rouge", "Rose", "Bleu", "Vert", "Jaune / orange", "RGB|multicolore"]),
+   G("Fixation", ["Murale (entretoises)", "Suspendu (chaînettes)", "Sur pied / posé"]),
+   G("Usage", ["Intérieur", "Extérieur|IP65 étanche"]),
+   CHK("Options", ["Variateur d’intensité", "Télécommande", "Mode clignotant"]), ...POSE(), PRESTA(), DES2()] }],
+ [/totem/, { u: "totem(s)", g: [
+   G("Hauteur", ["1,5 m", "2 m", "2,5 m", "3 m", "Sur mesure|à préciser"], { id: "fm", d: 1 }),
+   TXTW("Hauteur × largeur souhaitées (cm)", "Ex : 400 × 80", ["fm", "Sur mesure"]),
+   G("Largeur", ["40 cm", "60 cm", "80 cm", "100 cm"], { d: 1 }),
+   G("Structure", ["Aluminium", "Acier laqué", "Bois"]),
+   G("Habillage / face", ["Bâche tendue", "Dibond / ACP", "PVC expansé", "Acrylique opale|éclairé"]),
+   G("Faces imprimées", ["Simple face", "Double face"]),
+   G("Éclairage", ["Sans éclairage", "LED blanc froid|intérieur du totem", "LED blanc chaud|intérieur du totem"], { d: 0 }),
+   G("Fixation au sol", ["Platine boulonnée", "Scellement béton", "Socle lesté|déplaçable"]),
+   G("Usage", ["Extérieur", "Intérieur"]), SIGNCOL(), ...POSE(), PRESTA(), DES2()] }],
+ [/oriflamme|beach flag|drapeau publicitaire/, { u: "oriflamme(s)", g: [
+   G("Modèle", ["Goutte (beach flag)|le plus courant", "Plume (feather)", "Rectangle|droit", "Voile (sail)"]),
+   G("Taille", ["S — 2,3 m", "M — 2,8 m", "L — 3,4 m", "XL — 4,5 m"], { d: 1 }),
+   G("Impression", ["Simple face|verso en miroir", "Double face|2 visuels"]),
+   G("Base / pied", ["Pied croix + sac d’eau", "Plaque au sol lestée", "Piquet à planter|herbe, sable", "Pied en X voiture|véhicule"]),
+   CHK("Accessoires", ["Sac de transport", "Mât de rechange"]), SIGNCOL(), DES2()] }],
+ [/chevalet|stop trottoir|porte[- ]?affiche/, { u: "chevalet(s)", g: [
+   G("Modèle", ["Chevalet en A|cadre clic", "Chevalet tableau noir|craie / marqueur", "Chevalet à base lestée|anti-vent", "Porte-affiche sur pied"]),
+   G("Format de l’affiche", ["A1 (59 × 84 cm)", "70 × 100 cm", "A0 (84 × 119 cm)", "Autre|à préciser"], { d: 1 }),
+   G("Faces", ["Simple face", "Double face"], { d: 1 }),
+   G("Matière", ["Métal", "Bois", "Aluminium"]),
+   CHK("Fourniture", ["Affiche imprimée incluse", "Cadre seul sans impression"], { d: [0] }), SIGNCOL(), DES2()] }],
+ [/dibond|panneau|plaque|enseigne/, { u: "pièce(s)", g: [
+   G("Matière", ["Dibond / aluminium composite", "PVC expansé", "Plexiglas / acrylique", "Inox / laiton gravé|plaque pro", "Forex"]),
+   FMT_SM(["40 × 30 cm", "60 × 40 cm", "100 × 70 cm", "200 × 100 cm"]), DIMW(),
+   G("Épaisseur", ["3 mm", "5 mm", "10 mm|rigide", "Selon matière|conseil"]),
+   G("Réalisation", ["Impression numérique + film", "Gravure", "Découpe de lettres / logo", "Impression + découpe"]),
+   G("Fixation", ["Entretoises inox (distanciers)", "Adhésif double face", "Vis / chevilles", "Sur cadre / structure"]),
+   G("Usage", ["Intérieur", "Extérieur"]), SIGNTXT(), SIGNCOL(), ...POSE(), DES2()] }],
+ [/carte de visite/, { u: "ex.", q: [100, 250, 500, 1000], g: [G("Format", ["85 × 55 mm|standard", "90 × 50 mm|européen"]), G("Papier", ["Couché 300 g", "Couché 350 g|recommandé", "Couché 400 g|épais premium"], { d: 1 }), IMP(), G("Coins", ["Droits", "Arrondis"], { id: "co" }), ...PLAST(), DES()],
+   pre: n => ({ Coins: /arrondie/.test(n) ? 1 : 0, Plastification: /plastifi/.test(n) ? 1 : 0, Impression: 1 }),
+   img: () => "carte-visite/carte-visit.jpg" }],
+ [/menu qr/, { u: "support(s)", g: [G("Support", ["Chevalet de table", "Sticker QR", "Plaque rigide", "QR seul|fichier"]), G("Langues", ["1 langue", "2 langues", "3 langues"]), TXT("Lien de votre menu (si existant)", "https://...")] }],
+ [/menu livre/, { u: "menu(s)", g: [G("Format", ["A4", "A5", "Carré 21 × 21"]), G("Pages", ["4 pages", "8 pages", "12 pages", "16 pages", "Plus|à préciser"], { d: 1 }), G("Couverture", ["Souple", "Rigide|reliure premium"]), ...PLAST(), DES()] }],
+ [/menu/, { u: "menu(s)", g: [G("Format", ["A4", "A5", "A3"]), IMP(), ...PLAST(true), G("Coins", ["Droits", "Arrondis"]), DES()], img: null }],
+ [/flyer/, { u: "ex.", q: [100, 250, 500, 1000, 2500, 5000], g: [G("Grammage", ["115 g", "135 g", "170 g"], { d: 1 }), IMP(), PEL(), DES()] }],
+ [/affiche/, { u: "ex.", g: [G("Format", ["A3", "A2", "A1", "A0"]), G("Papier", ["Couché 135 g", "Couché 170 g", "Papier photo"]), PEL(), DES()] }],
+ [/brochure/, { u: "ex.", q: [50, 100, 250, 500], g: [G("Format", ["A4", "A5"]), G("Pages", ["8", "12", "16", "24", "32+"], { d: 1 }), G("Reliure", ["Agrafée", "Dos carré collé", "Spirale"]), G("Papier intérieur", ["115 g", "135 g", "170 g"]), G("Couverture", ["Même papier", "300 g pelliculée"]), DES()] }],
+ [/troph/, { u: "pièce(s)", g: [G("Matière", ["Cristal / verre", "Acrylique", "Métal", "Bois"]), G("Taille", ["Petit|15 cm", "Moyen|22 cm", "Grand|30 cm"], { d: 1 }), G("Gravure", ["Texte seul", "Texte + logo"]), CHK("Extras", ["Boîte cadeau", "Plaque dorée"]), TXT("Texte à graver", "Ex : Meilleur employé 2026")] }],
+ [/enveloppe/, { u: "ex.", q: [250, 500, 1000, 2000], g: [G("Format", [/us/.test("") ? "" : "Standard", "Grand format|à préciser"]), G("Papier", ["80 g", "90 g", "120 g"]), G("Impression", ["1 couleur", "Quadrichromie"]), DES()], fmt: n => /us/.test(n) ? ["Standard US", "Grand US|à préciser"] : ["DL 11 × 22", "C5 16 × 23", "C4 23 × 32"] }],
+ [/pochette/, { u: "ex.", q: [50, 100, 250, 500], g: [G("Format", ["A4", "A5"]), G("Grammage", ["250 g", "300 g", "350 g"], { d: 1 }), PEL(), G("Rabat", ["Avec rabat", "Sans rabat"]), DES()] }],
+ [/b[aâ]che|banderole/, { u: "bâche(s)", g: [G("Matière", ["Bâche 440 g|intérieur / extérieur", "Bâche 510 g|renforcée", "Bâche micro-perforée|anti-vent"]), TXT("Dimensions (L × H en m)", "Ex : 3 × 1"), CHK("Finitions", ["Œillets", "Ourlets soudés", "Fourreaux"], { d: [0, 1] }), DES()] }],
+ [/vinyle/, { u: "pièce(s)", g: [G("Vinyle", ["Blanc brillant", "Blanc mat", "Transparent", "Repositionnable"]), TXT("Dimensions (L × H en cm)", "Ex : 120 × 60"), G("Découpe", ["Impression seule", "Impression + découpe à la forme"]), PEL(), DES()] }],
+ [/one way/, { u: "pièce(s)", g: [G("Support", ["Vitrine / vitre", "Vitres de véhicule"]), TXT("Dimensions (L × H en cm)", "Ex : 200 × 150"), G("Pose", ["Fourniture seule", "Fourniture + pose"]), G("Découpe", ["Rectangle", "Forme personnalisée"]), DES()] }],
+ [/360/, { u: "caméra(s)", g: [G("Résolution", ["2 MP", "4 MP", "5 MP", "8 MP"], { d: 1 }), G("Emplacement", ["Intérieur", "Extérieur"]), G("Installation", ["Fourniture seule", "Fourniture + installation"]), CHK("Accessoires", ["Alimentation", "Câble", "Carte mémoire", "Enregistreur DVR"])] }],
+ [/habillage|covering/, { u: "véhicule(s)", g: [G("Véhicule", ["Citadine", "Berline / SUV", "Utilitaire", "Camion / remorque"]), G("Zone", ["Marquage partiel|logo + texte", "Semi-covering", "Covering total", "Vitres microperforées"]), G("Film", ["Vinyle adhésif", "Vinyle laminé|longue durée"]), TXT("Marque / modèle", "Ex : Dacia Dokker"), DES()] }],
+ [/trac|plans? d/, { u: "plan(s)", g: [G("Format", ["A4", "A3", "A2", "A1", "A0"], { d: 2 }), G("Couleur", ["Noir & blanc", "Couleur"]), G("Papier", ["80 g", "Calque", "Papier plan 90 g"])] }],
+ [/carnet contrat/, { u: "carnet(s)", g: [G("Format", ["A4", "A5"]), G("Duplicata", ["2 feuillets", "3 feuillets"]), G("Carnet de", ["50", "100"]), G("Numérotation", ["Sans", "Numéroté"]), DES()] }],
+ [/carnet/, { u: "carnet(s)", g: [G("Format", ["A4", "A5", "A6"], { d: 1 }), G("Carnet de", ["50 feuillets", "100 feuillets"]), G("Copie", ["Simple", "Autocopiant"]), G("Numérotation", ["Sans", "Numéroté"]), DES()] }],
+ [/en-t[eê]te|ordonnance/, { u: "bloc(s)", q: [250, 500, 1000], g: [G("Format", ["A4", "A5"]), G("Papier", ["80 g", "90 g", "100 g"]), G("Couleurs", ["Noir & blanc", "Couleur"]), DES()] }],
+ [/roll-?up/, { u: "unité(s)", g: [G("Taille", ["80 × 200 cm", "85 × 200 cm", "100 × 200 cm", "120 × 200 cm"], { d: 1 }), G("Structure", ["Standard", "Premium aluminium"]), G("Bâche", ["Standard", "Premium opaque"]), DES()] }],
+ [/x-banner/, { u: "unité(s)", g: [G("Taille", ["60 × 160 cm", "80 × 180 cm"]), G("Support", ["Bâche", "Papier photo"]), DES()] }],
+ [/forex/, { u: "pièce(s)", g: [G("Épaisseur", ["3 mm", "5 mm", "10 mm"], { d: 1 }), TXT("Dimensions (L × H en cm)", "Ex : 100 × 70"), G("Découpe", ["Rectangle", "Forme personnalisée"]), PEL(), DES()] }],
+ [/t-shirt/, { u: "pièce(s)", g: [CHK("Tailles", ["S", "M", "L", "XL", "XXL"], { d: [2] }), G("Couleur", ["Blanc", "Noir", "Bleu", "Rouge", "Autre|à préciser"]), G("Matière", ["Coton 150 g", "Coton 180 g|premium", "Polyester|sublimation"]), G("Technique", ["Flex", "DTF", "Sublimation"]), CHK("Emplacement", ["Poitrine", "Dos", "Manche"], { d: [0] }), DES()] }],
+ [/thermosensible/, { u: "mug(s)", g: [G("Couleur", ["Noir", "Bleu", "Rouge"]), DES()] }],
+ [/mug/, { u: "mug(s)", g: [G("Modèle", ["Blanc classique", "Intérieur + anse colorés"]), G("Impression", ["Une face", "Tour complet"], { d: 1 }), G("Emballage", ["Sans", "Boîte cadeau"]), DES()] }],
+ [/sac/, { u: "sac(s)", g: [G("Matière", ["Tissu / coton", "Non-tissé", "Papier kraft"]), G("Taille", ["Petit", "Moyen", "Grand"], { d: 1 }), G("Impression", ["1 couleur", "Quadrichromie"]), DES()] }],
+ [/cam[eé]ra/, { u: "caméra(s)", g: [G("Résolution", ["2 MP", "5 MP", "8 MP", "16 MP"], { d: 1 }), G("Installation", ["Fourniture seule", "Fourniture + installation"]), CHK("Accessoires", ["Alimentation", "Câble", "Enregistreur DVR", "Disque dur"])] }],
+ [/papier/, { u: "ramette(s)", g: [G("Conditionnement", ["Ramette 500 f.", "Carton de 5 ramettes"])] }],
+ [/toner/, { u: "toner(s)", g: [G("Type", ["Compatible", "Original|sur demande"])] }],
+ [/tampon/, { u: "tampon(s)", g: [G("Encre", ["Bleu", "Noir", "Rouge", "Violet"]), TXT("Texte du tampon", "Nom, adresse, ICE..."), G("Logo", ["Sans logo", "Avec logo|envoyé sur WhatsApp"])] }]
+];
+
+const XTRA = [
+ [/carte de visite/, [G("Versions / noms", ["1 version", "2 versions", "3 versions et +|à préciser"]), CHK("Finitions spéciales", ["Vernis sélectif|sur demande", "Dorure|sur demande"])]],
+ [/flyer/, [G("Pliage", ["Sans pliage", "Plié en 2", "Plié en 3"])]],
+ [/affiche/, [G("Orientation", ["Portrait", "Paysage"])]],
+ [/enveloppe/, [G("Fenêtre", ["Sans fenêtre", "Avec fenêtre"]), G("Fermeture", ["Gommée", "Bande autocollante"])]],
+ [/b[aâ]che|banderole/, [G("Usage", ["Extérieur", "Intérieur"]), G("Impression", ["Une face", "Double face"]), ...POSE()]],
+ [/vinyle/, [G("Usage", ["Intérieur", "Extérieur"]), ...POSE()]],
+ [/forex/, [G("Fixation", ["Sans|à poser soi-même", "Adhésif double face", "Entretoises"]), G("Usage", ["Intérieur", "Extérieur"])]],
+ [/roll-?up/, [CHK("Extras", ["Sac de transport", "Bâche de rechange"], { d: [0] })]],
+ [/^(?!.*fa[cç]ade).*(habillage|covering)/, [G("Dépose", ["Sans dépose", "Dépose de l’ancien marquage"]), G("Pose", ["En atelier", "Sur site"]), TXT("Couleur / année du véhicule", "Ex : blanc, 2021"), CHK("Prestations en plus", ["Relevé du véhicule", "Aperçu du design avant impression"])]],
+ [/t-shirt/, [G("Genre", ["Homme", "Femme", "Enfant", "Mixte"]), TXT("Répartition des tailles", "Ex : 5 M, 10 L, 5 XL")]],
+ [/cam[eé]ra/, [G("Câblage", ["Câble déjà en place", "Tirage de câble à prévoir"]), G("Stockage", ["Sans stockage", "Disque dur 1 To", "Disque dur 2 To", "Disque dur 4 To"]), TXT("Distance / nombre de points", "Ex : 4 caméras, câble ≈ 25 m")]],
+ [/trac|plans? d/, [G("Livraison du plan", ["Roulé", "Plié", "Fichier PDF"])]],
+ [/carnet/, [G("Couleurs d’impression", ["Noir & blanc", "Couleur"])]]
+];
+const FALLBACK = { u: "unité(s)", g: [G("Format", ["Standard", "Sur mesure|à préciser"]), DES()] };
+const IMGS = { "totem": "enseignes-lumineuses/totems.jpg", "flyer a4": "flyer/flyer-a4.jpg", "flyer a5": "flyer/flyer-a5.jpg", "flyer a6": "flyer/flyer-a6.jpg", "affiche": "flyer/affiche.jpg", "brochure": "flyer/brochure.jpg", "plans d’architecture": "plans-darchitecture/plan-darchitecture.jpg", "tracés": "plans-darchitecture/plan-darchitecture.jpg", "carnet contrat": "plans-darchitecture/carnet-contrat-de-location.jpg", "carnet personnalisé": "plans-darchitecture/carnet.jpg", "en-tête": "plans-darchitecture/en-tete-2.jpg", "habillage": "habillage/habillage-vehicul.jpg" };
+const parse = s => { const p = String(s).split("|"); return { v: p[0], h: p[1] || "" }; };
+
+function enhance(card, idx) {
+  const name = (card.querySelector("h2")?.textContent || "Produit").replace(/\s+/g, " ").trim(), low = name.toLowerCase();
+  const cfg = (L.find(x => x[0].test(low)) || [0, FALLBACK])[1];
+  let groups = cfg.fmt ? cfg.g.map(g => g.l === "Format" ? G("Format", cfg.fmt(low)) : g) : cfg.g;
+  const xt = XTRA.filter(x => x[0].test(low)).reduce((a, x) => a.concat(x[1]), []);
+  if (xt.length) { const have = groups.map(g => g.l), add = xt.filter(g => have.indexOf(g.l) < 0), di = groups.findIndex(g => g.l === "Design"); groups = di < 0 ? groups.concat(add) : groups.slice(0, di).concat(add, groups.slice(di)); }
+  const pre = cfg.pre ? cfg.pre(low) : {}, uid = "pp" + idx;
+  const slot = card.querySelector(".image-slot"); let img = slot && slot.querySelector("img");
+  const key = Object.keys(IMGS).find(k => low.indexOf(k) === 0 || low.indexOf(k) > -1); 
+  if (slot && key && (!img || !img.getAttribute("src") || img.dataset.fix || (key === "habillage" && !/fa[cç]ade/.test(low)))) { if (!img) { img = document.createElement("img"); slot.appendChild(img); } img.src = IMGS[key]; img.alt = name; img.dataset.fix = 1; img.style.display = ""; slot.classList.remove("noimg"); img.onerror = () => { img.style.display = "none"; slot.classList.add("noimg"); }; }
+  let html = "";
+  groups.forEach((g, gi) => {
+    const nm = uid + "_" + gi, id = g.id ? ' data-gid="' + g.id + '"' : "", wh = g.when ? ' data-when-g="' + g.when[0] + '" data-when-v="' + g.when[1] + '"' : "";
+    html += "<fieldset class='pp-g' data-l='" + esc(g.l) + "' data-t='" + g.t + "'" + id + wh + "><legend>" + esc(g.l) + "</legend>";
+    if (g.t === "text") html += "<input type='text' class='pp-in' placeholder='" + esc(g.ph || "") + "' maxlength='120'>";
+    else html += "<div class='pp-chips'>" + g.c.map((c, ci) => { const o = parse(c), dflt = g.t === "check" ? (g.d || []).indexOf(ci) > -1 : ((pre[g.l] != null ? pre[g.l] : g.d || 0) === ci);
+      return "<label class='pp-chip'><input type='" + (g.t === "check" ? "checkbox" : "radio") + "' name='" + nm + "' value='" + esc(o.v) + "'" + (dflt ? " checked" : "") + "><span><b>" + esc(o.v) + "</b>" + (o.h ? "<i>" + esc(o.h) + "</i>" : "") + "</span></label>"; }).join("") + "</div>";
+    html += "</fieldset>";
+  });
+  html += "<fieldset class='pp-g' data-l='Précision' data-t='note'><legend>Précisions <em>(facultatif)</em></legend><textarea class='pp-in' rows='2' maxlength='300' placeholder='Dimensions exactes, couleurs, délai, détails…'></textarea></fieldset>";
+  const wrap = document.createElement("div"); wrap.className = "pp-opts"; wrap.innerHTML = html + "<div class='pp-sum' aria-live='polite'></div>";
+  const actions = card.querySelector(".actions"); (actions ? actions.parentNode : card.querySelector(".card-body") || card).insertBefore(wrap, actions);
+  /* quantité */
+  let qIn = card.querySelector(".quantity"); const q = cfg.q;
+  if (qIn) { if (q) { const s = document.createElement("select"); s.className = "quantity pp-qsel"; s.setAttribute("aria-label", "Quantité"); s.innerHTML = q.map((n, i) => "<option value='" + n + "'" + (i === 0 ? " selected" : "") + ">" + n + " " + cfg.u + "</option>").join(""); qIn.replaceWith(s); qIn = s; } else { qIn.min = 1; qIn.value = 1; qIn.insertAdjacentHTML("afterend", "<span class='pp-u'>" + esc(cfg.u) + "</span>"); } }
+  const read = () => { const o = {}, arr = [];
+    $$(".pp-g", wrap).forEach(f => { if (f.hidden) return; const l = f.dataset.l, t = f.dataset.t; let v = ""; if (t === "radio") v = (f.querySelector("input:checked") || {}).value || ""; else if (t === "check") v = $$("input:checked", f).map(i => i.value).join(", "); else v = ($(".pp-in", f) || {}).value || ""; v = v.trim(); if (!v || t === "note") return; o[l] = v; arr.push([l, v]); });
+    return { o, arr, note: ($("textarea", wrap).value || "").trim() }; };
+  const sync = () => { $$(".pp-g[data-when-g]", wrap).forEach(f => { const src = $("[data-gid='" + f.dataset.whenG + "'] input:checked", wrap); f.hidden = !(src && src.value === f.dataset.whenV); });
+    const r = read(); $(".pp-sum", wrap).innerHTML = "<i class='fa-solid fa-sliders'></i> " + (r.arr.map(a => esc(a[1])).join(" · ") || "Configuration par défaut");
+    if (cfg.img && slot) { const i = slot.querySelector("img"); if (i) { const src = cfg.img(r.o); if (i.getAttribute("src") !== src) { i.style.display = ""; slot.classList.remove("noimg"); i.src = src; } } } };
+  wrap.addEventListener("input", sync); wrap.addEventListener("change", sync); sync();
+  card._pp = { name, cfg, read, qIn };
+}
+PP.addFromCard = function (card, btn) {
+  const d = card._pp; if (!d) return; const r = d.read(), badge = card.querySelector(".badge");
+  const qty = Math.max(1, parseInt(d.qIn?.value, 10) || 1), cur = card.querySelector(".image-slot img");
+  PP.add({ name: d.name, category: (badge?.textContent || "").trim(), image: cur && cur.style.display !== "none" ? cur.getAttribute("src") : "", opts: r.arr, note: r.note, qty, min: d.cfg.q ? d.cfg.q[0] : 1, step: d.cfg.q ? d.cfg.q[0] : 1, unit: d.cfg.u });
+  if (btn) { const old = btn.innerHTML; btn.classList.add("added"); btn.innerHTML = "<i class='fa-solid fa-check'></i> Ajouté"; setTimeout(() => { btn.classList.remove("added"); btn.innerHTML = old; }, 1400); }
+  toast(d.name + " ajouté au panier", "Voir le panier", PP.open);
+};
+
+/* ---------- Thème par page ---------- */
+const TH = { "carnet": ["#04162e", "#0b3d91", "#1e6fd9", "#06214a", "#8fd3ff", "#4cc9f0"], "grand format": ["#10121c", "#2b3a67", "#e63946", "#161a2b", "#ffd166", "#4cc9f0"], "menus": ["#2b0a0a", "#a61e2b", "#d9480f", "#3b0d0d", "#ffc933", "#ff8a5b"], "flyers": ["#2a0b3d", "#7a1fa2", "#c2188a", "#35104d", "#ffd23f", "#ff5fa2"], "goodies": ["#1f1606", "#8a6410", "#c99a1d", "#2b1e08", "#ffe08a", "#f4c542"], "habillage": ["#06161c", "#0b6b73", "#12a4a8", "#0a2329", "#d7ff3f", "#33e0d1"], "plans": ["#04162e", "#0b3d91", "#1e6fd9", "#06214a", "#8fd3ff", "#4cc9f0"], "roll-up": ["#1a1040", "#4527a0", "#6c4ee0", "#20134f", "#ffc800", "#9d8cff"], "t-shirts": ["#2f0a1a", "#d6336c", "#f76707", "#3d0f22", "#ffe066", "#ff8787"], "cam": ["#0b0f14", "#1f2a37", "#c81e1e", "#111827", "#ff4d4d", "#5ac8fa"], "papier": ["#052e1e", "#0f6b45", "#1aa36a", "#073b28", "#ffd43b", "#5ee0a0"], "tampons": ["#101a3a", "#1d3f9c", "#3a63d8", "#14224d", "#ff4d5e", "#7aa2ff"] };
+function theme() {
+  const p = decodeURIComponent(location.pathname).toLowerCase(), k = Object.keys(TH).find(k => p.indexOf(k) > -1); return; /* thème éco unique : couleurs par page désactivées */ if (!k || !$(".hero")) return;
+  const v = TH[k], s = document.documentElement.style; ["--hd", "--blue", "--hm", "--dark", "--yellow", "--cyan"].forEach((n, i) => s.setProperty(n, v[i])); document.documentElement.classList.add("pp-themed");
+}
+
+/* ---------- Initialisation ---------- */
+function init() {
+  theme();
+  /* remplace l'ancien panier */
+  window.addToCart = function (a) { const b = (a && a.closest) ? a : ((window.event || {}).currentTarget || document.activeElement); const card = b && b.closest && b.closest(".card"); if (card) PP.addFromCard(card, b); };
+  window.updateCount = window.updateMainCartCount = function(){}; window.openCart = window.openMainCart = PP.open; window.goToQuote = () => { location.href = "devis.html"; }; window.closeCart = window.closeMainCart = PP.close;
+  $$("article.card").forEach(enhance);
+  $$("a[href$='#devis'],a[href='index.html#devis']").forEach(a => a.setAttribute("href", "devis.html"));
+  if (!/devis\.html/.test(location.pathname)) { const f = document.createElement("button"); f.id = "pp-fab"; f.type = "button"; f.setAttribute("aria-label", "Ouvrir le panier"); f.innerHTML = "<i class='fa-solid fa-basket-shopping'></i><span>Panier</span><b id='pp-fab-n'>0</b>"; f.onclick = PP.open; document.body.appendChild(f); }
+  refreshBadges(); window.addEventListener("storage", () => { listeners.forEach(f => f()); refreshBadges(); });
+}
+document.readyState === "loading" ? document.addEventListener("DOMContentLoaded", init) : init();
+})();
+
+</script>
+</body>
+</html>
